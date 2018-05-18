@@ -20,6 +20,7 @@
 	\StrCut{\DiceArg}{d}\DiceNum\DiceSides%			split string
 	\StrCut{\DiceSides}{+}\DiceSides\DiceAddMod%
 	\StrCut{\DiceSides}{-}\DiceSides\DiceSubMod%
+	\StrCut{\DiceSides}{x}\DiceSides\DiceMultMod%
 	\FPeval{\DiceAvg}{(\DiceSides+1)/2*\DiceNum}%	calculate avg roll	
 	\IfInteger{\DiceAddMod}{%
 		\FPadd{\DiceAvg}{\DiceAvg}{\DiceAddMod}%	add value
@@ -29,7 +30,12 @@
 			\FPsub{\DiceAvg}{\DiceAvg}{\DiceSubMod}%	subtract value
 			\def\DiceMod{ \(-\) \DiceSubMod}%
 		}{%
-			\def\DiceMod{}%
+			\IfInteger{\DiceMultMod}{%
+				\FPmul{\DiceAvg}{\DiceAvg}{\DiceMultMod}%	subtract value
+				\def\DiceMod{ \(X\) \DiceMultMod}%
+			}{%
+				\def\DiceMod{}%
+			}%
 		}%
 	}%
 	\FPtrunc{\DiceAvg}{\DiceAvg}{0}%				round down
@@ -62,7 +68,7 @@
   frame hidden,
   before skip=7pt plus 2pt,
   boxrule=0pt,
-  breakable,
+  %breakable,
   boxsep=0pt,
   toptitle=11pt,
   left=7pt,
