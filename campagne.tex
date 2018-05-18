@@ -1,0 +1,2589 @@
+% Changing book to article will make the footers match on each page,
+% rather than alternate every other.
+%
+% Note that the article class does not have chapters.
+\documentclass[a4paper,10pt,openany]{book}
+
+% Use babel or polyglossia to automatically redefine macros for terms
+% Armor Class, Level, etc...
+% Default output is in English; captions are located in lib/dndstring-captions.sty.
+% If no captions exist for a language, English will be used.
+%1. To load a language with babel:
+%	\usepackage[<lang>]{babel}
+%2. To load a language with polyglossia:
+%	\usepackage{polyglossia}
+%	\setdefaultlanguage{<lang>}
+%usepackage[english]{babel}
+%usepackage[italian]{babel}
+\usepackage[french]{babel}
+% For further options (multilanguage documents, hypenations, language environments...)
+% please refer to babel/polyglossia's documentation.
+
+\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+
+\usepackage{hang}
+\usepackage{lipsum}
+\usepackage{listings}
+
+\usepackage{campagn}
+
+\lstset{%
+  basicstyle=\ttfamily,
+  language=[LaTeX]{TeX},
+}
+
+% Start document
+\begin{document}
+
+% Your content goes here
+\tableofcontents
+
+% Comment this out if you're using the article class.
+\chapter{Introduction}
+
+Cette campagne est destinée à un groupe d’aventuriers débutants, qui se déroule dans le monde des \Royaumes, un monde « \emph{Low fantasy} ».
+Les \PJs commencent comme conscrits, puis vont être embarqué dans une expédition recherchant une antique cité disparue, le tout entrecoupé
+d’aventures et d’embûches.
+
+\section{Création de \PJs}
+
+\begin{multicols}{2}
+\subsection{Choix de la race}
+La population des \Royaumes est presque totalement humaine, mais il est possible d’y rencontrer un \Nain - un Nain des Collines, ou un \Elfe - un elfe
+sylvain, races dont il existes un petit nombre d’habitats dans les royaumes. Il est également possible de croiser un \DemiOrc - un demi orque, race
+dont il n’existe pas d’habitat sédentaire dans les \Royaumes.
+
+\subsubsection{Races et langages}
+Tous les \PJs parlent d’office le \emph{bas-thrain}, la langue commune des royaumes. Les humains parlent également leur langue régionale.
+\Elfes, \Nains et \DemiOrcs parlent en plus leur langue natale. Enfin, les \PJs particulièrement intelligents (c’est-à-dire ceux qui bénéficient d’un
+bonus en Intelligence au niveau 1) peuvent choisir un langage supplémentaire par point de bonus d’intelligence en tant que \PJ débutant. Si votre \PJ
+a droit à d’autres langues, faites votre choix dans la liste proposée pour sa race, ou sa classe.
+\paragraph{Degré d’alphabétisation}
+Dans les régions humaines, seuls les \PJs magiciens et prêtres savent lire et écrire d’office les langues qu’ils parlent. les autres \PJs peuvent
+apprendre à lire et écrire avec leur historique.
+\paragraph{Langues de classe}
+Prêtres et magiciens de niveau 1 peuvent choisir certains langages en tant que langue supplémentaire obtenue grâce au bonus d’intelligence, même s’ils
+ne sont pas mentionnés dans la description de leur race. Il s’agit des langues ci-dessous :
+\begin{itemize}
+  \item Magicien : \emph{draconien}.
+  \item Prêtre : \emph{abyssal}, \emph{céleste}, \emph{infernal}.
+\end{itemize}
+
+\subsubsection{Les humains}
+Les humains sont identiques à nos ancêtres du moyen âge. Un peu plus petit que nous, ils sont plus forts physiquement, et ont beaucoup moins
+d’éducation que nos contemporain. La population est sédentaire, avec une répartition séparée entre de nombreux villages de paysans, de très faible
+population, d’un coté, et d’immenses cités de l’autre. Rare sont les humains qui savent plus que déchiffrer quelques lettres, l’analphabétisme est de
+règle. Mais les traditions orales sont très importantes dans les sociétés humaines. Par contre, les métiers manuels sont très répandus et couvrent une
+vaste étendue de domaine.
+\paragraph{Ajustement de caractéristique}
+Toutes vos caractéristiques augmentent de 1.
+\paragraph{\^Age}
+Les humains atteignent l’âge adulte peu avant 20 ans et vivent 50 ans en moyenne.
+\paragraph{Alignement}
+Les humains ne tendent vers aucun alignement en particulier. Le meilleur et le pire se trouvent parmi eux.
+\paragraph{Taille}
+Les humains ont des tailles et des complexions très variables, pouvant mesurer depuis 1,55 mètre jusqu’à bien plus de 1,85 mètre. Quelle que soit
+votre taille à l’intérieur de cette plage, votre taille est Moyenne (M).
+\paragraph{Vitesse}
+Votre vitesse de base est de 9 mètres par round.
+\paragraph{Langues}
+Les humains parlent le \emph{bas-thrain}, la langue commune des royaumes, ainsi que la langue de leur région natale. Ils peuvent apprendrent également
+le \emph{haut-thrain}, une autre langue régionnale, ou une langue des autres peuples : \emph{elvish}, \emph{kad-ish} et \emph{glamhoth}.
+\paragraph{Région natale}
+Les humains choisissent leur région natale.
+
+\subsubsection{Les \Elfes}
+Ce sont des humanoïdes qui vivent au plus profond des forêts, et qui vivent en grande partie de la chasse. Ils sont minces, et un peu plus grand que
+les humains. Ils sont très difficiles à voir dans la forêt. Leurs cheveux sont blonds ou cuivrés et s’habillent dans des tons de vert. Ils se nomment
+\Elfes entre eux, mais sont parfois appelés Elfes par les autres races.\par Les \Elfes vivent en petites communautés de 200 âmes en général, et sont
+gouvernés par l’Ancien, le plus vieil elfe de leur village. Les Anciens des villages de la forêt se regroupent en Conseil, et élisent leur souverain.
+\paragraph{Ajustement de caractéristique}
+Votre Dextérité augmente de 2, et votre Sagesse augmente de 1.
+\paragraph{\^Age}
+Bien que les \Elfes atteignent la maturité physique à peu près au même âge que les humains, pour les \Elfes la définition de l’âge adulte dépend plus
+de l’expérience que l’on peut avoir du monde que de la croissance physique. Un \Elfe prétend généralement à l’âge adulte et à un nom d’adulte aux
+alentours de ses 100 ans et peut vivre jusqu’à 750 ans.
+\paragraph{Alignement}
+Les \Elfes aiment la liberté, la variété et l’auto-détermination, c’est pourquoi ils penchent fortement vers les aspects les plus doux du chaos. Ils
+apprécient et protègent la liberté d’autrui autant que la leur, et sont le plus souvent bons.
+\paragraph{Taille}
+Les \Elfes mesurent entre 1,50 m et 1,80 m et sont élancés. Votre taille est Moyenne (M).
+\paragraph{Vitesse}
+Vous avez le pied léger. Votre vitesse de base est de 10,5 mètres par round.
+\paragraph{Vision dans le noir}
+Vous pouvez voir à 18 mètres dans une lumière faible comme vous verriez avec une lumière vive, et dans le noir comme vous verriez avec une lumière
+faible. Dans le noir, vous ne discernez pas les couleurs, uniquement des nuances de gris.
+\paragraph{Sens aiguisés}
+Vous maîtrisez la compétence Perception.
+\paragraph{Ascendance féerique}
+Vous avez l’avantage aux jets de sauvegarde contre les effets de charme et la magie ne peut pas vous endormir.
+\paragraph{Entraînement aux armes elfiques}
+Vous obtenez la maîtrise des épées (longues et courtes) et des arcs (longs et courts).
+\paragraph{Cachette naturelle}
+Vous pouvez tenter de vous cacher dans une zone à visibilité réduite, comme en présence de branchages, de forte pluie, de neige qui tombe, de brume ou
+autre phénomène naturel.
+\paragraph{Transe}
+Les \Elfes n’ont pas besoin de dormir. Au lieu de cela, ils méditent profondément, restant à demi conscients, 4 heures par jour (le mot commun pour
+désigner cette méditation est « transe »). En méditant, vous pouvez rêver, tant bien que mal ; ces rêves sont en fait des exercices mentaux qui
+deviennent un réflexe après des années de pratique. Après un repos de ce type, vous obtenez les mêmes avantages qu’un humain après 8 heures de
+sommeil.
+\paragraph{Langues}
+Vous pouvez parler, lire et écrire l’\emph{elvish} et le \emph{bas-thrain}. Vous pouvez apprendrent également le \emph{haut-thrain}, le
+\emph{glamhoth}, le \emph{draconien} et le \emph{gobelin}.
+
+\subsubsection{Les \Nains}
+Ces humanoïdes sont de rudes et petits montagnards qui vivent d’élevage, de chasse et de cueillette. Ils sont petits et trapus, et semblent posséder
+beaucoup de force. Les males portent fièrement barbe et moustache. Ce sont aussi de bons mineurs, et ils exploitent les richesses de leurs
+montagnes.\par Les \Nains n’ont pas une structure sociale développée comme dans les royaumes : ils vivent en petites communautés troglodytes, dans les
+montagnes. Les communautés sont gouvernées par une famille noble, et chaque communauté est affiliée à un Clan. Le chef du clan le plus important est
+élu Roi.
+\paragraph{Ajustement de caractéristique}
+Votre Constitution augmente de 2 et Votre Force augmente de 1.
+\paragraph{\^Age}
+Les \Nains vieillissent au même rythme que les humains, mais sont considérés comme jeunes jusqu’à ce qu’ils atteignent l’âge de 50 ans. En moyenne,
+ils vivent environ 350 ans.
+\paragraph{Alignement}
+La plupart des \Nains sont d’alignement loyal, croyant fermement aux avantages d’une société bien ordonnée. Ils tendent également à être bons, ont un
+fort sens du fair-play et la ferme conviction que tout le monde mérite de partager les avantages d’un ordre juste.
+\paragraph{Taille}
+Les \Nains mesurent entre 1,20 m et 1,50 m pour un poids aux alentours de 70 kg. Votre taille est Moyenne (M).
+\paragraph{Vitesse}
+Votre vitesse de base est de 7,50 mètres par round. Votre vitesse n’est pas réduite par le port d’une armure lourde.
+\paragraph{Vision dans le noir}
+Habitué à la vie souterraine, vous avez une vision supérieure dans l’obscurité et la lumière faible. Vous pouvez voir à 18 mètres dans une zone de
+lumière faible comme vous verriez avec une lumière vive, et dans le noir comme vous verriez avec une lumière faible. Dans le noir, vous ne discernez
+pas les couleurs, uniquement des nuances de gris.
+\paragraph{Résistance naine}
+Vous avez l’avantage aux jets de sauvegarde contre le poison et obtenez la résistance contre les dégâts de poison.
+\paragraph{Robustesse naine}
+Vos points de vie maximums augmentent de 1 à chaque niveau.
+\paragraph{Entraînement aux armes naines}
+Vous obtenez la maîtrise des hachettes, des haches d’armes, des marteaux légers et des marteaux de guerre.
+\paragraph{Maîtrise des outils}
+Vous obtenez la maîtrise d’un des outils d’artisan suivant au choix : outils de forgeron, outils de brasseur ou outils de maçon.
+\paragraph{Connaissance de la pierre}
+Chaque fois que vous effectuez un jet d’Intelligence (Histoire) en relation avec l’origine d’un travail lié à la pierre, considérez que vous maîtrisez
+la compétence Histoire et ajoutez le double de votre bonus de maîtrise au jet, au lieu du bonus de maîtrise normal.
+\paragraph{Langues}
+Vous pouvez parler, lire et écrire le \emph{kad-ish} et le \emph{bas-thrain}. Vous pouvez apprendre également le \emph{haut-thrain}, le
+\emph{glamhoth} et le \emph{terreux}.
+
+\subsubsection{Les \DemiOrcs}
+Ces humanoïdes ressemblent à des hommes primitifs, avec la peau grise et velue et un front très incliné vers l’arrière. Ils vivent dans les steppes
+gelées du nord principalement. Ils vivent en groupes patriarcaux, se déplacent en fonction des ressources et vivent sous des tentes. Ils aiment les
+couleurs criardes (rouge sang, jaune moutarde, vert-jaune ou violet).
+\paragraph{Ajustement de caractéristique}
+Votre Force augmente de 2 et votre Constitution augmente de 1.
+\paragraph{\^Age}
+Les \DemiOrcs deviennent matures un peu plus vite que les humains, atteignant l’âge adulte aux environs de 14 ans. Ils vieillissent sensiblement plus
+rapidement et vivent rarement plus de 45 ans.
+\paragraph{Alignement}
+Les \DemiOrcs ont une tendance vers le chaos et ne sont pas fortement inclinées vers le bien.
+\paragraph{Taille}
+Les \DemiOrcs sont un peu plus grands et trapus que les humains et mesurent de 1,60 à bien plus de 1,90 mètre. Votre taille est Moyenne (M).
+\paragraph{Vitesse}
+Votre vitesse de base est de 9 mètres par round.
+\paragraph{Vision dans le noir}
+Vous avez une vision supérieure dans le noir et les conditions de faible éclairage. Vous pouvez voir à 18 mètres dans une lumière faible comme vous
+verriez avec une lumière vive, et dans le noir comme vous verriez avec une lumière faible. Dans le noir, vous ne discernez pas les couleurs,
+uniquement des nuances de gris.
+\paragraph{Menaçant}
+Vous gagnez la maîtrise de la compétence Intimidation..
+\paragraph{Acharnement}
+Lorsque vous êtes réduit à 0 point de vie, mais pas tué sur le coup, vous pouvez remonter à 1 point de vie. Vous devez terminer un repos long pour
+pouvoir utiliser cette capacité de nouveau.
+\paragraph{Attaques sauvages}
+Lorsque vous réalisez un coup critique lors d’une attaque au corps à corps avec une arme, vous pouvez jeter l’un des dés de dégâts de l’arme une
+deuxième fois et l’ajouter aux dégâts supplémentaires du coup critique.
+\paragraph{Langues}
+Vous pouvez parler le \emph{glamhoth} et le \emph{bas-thrain}. Vous pouvez apprendre également le \emph{gobelin}.
+
+\subsection{Région d’origine}
+Les particularités raciales ne suffisent pas pour différencier les \PJs, car leur région d’origine les marque également pour ce qui est du
+langage, des coutumes et des compétences. Chaque région a pour particularité une langue, et pour préférence des classes et des historiques.
+
+\subsubsection{Les royaumes du nord}
+Région des royaumes ou le climat est le plus froid et le plus rude des terres colonisées par les humains de Levande, elle regroupe les royaumes de
+Marienad, Vogoul, Bouriat, Atlans et Lepando. Ces royaumes ont longtemps subi des raids de \DemiOrcs en provenance des steppes, on y trouve de ce fait
+beaucoup de villages fortifiés, de tours de guet et de places fortes. Les routes sont très surveillées par des patrouilles.
+\paragraph{Langues}
+La langue officielle des royaumes du nord est le \emph{nothrain}.
+\paragraph{Classes}
+Les guerriers sont les plus répandus dans ces contrées.
+\paragraph{Historiques}
+Vous pouvez choisir les historiques Soldat, Charlatan ou Héros du peuple
+
+\subsubsection{Les royaumes de l’ouest}
+Cette région est la plus riche du continent, grâce à ses plaines fertiles et son climat tempéré. Elle regroupe les royaumes de Kurnai, Robane,
+Facherotes, Jadurais et Samarand. Il s’y trouve beaucoup moins de fortifications et de patrouilles, mais les caravanes des marchands sont protégées
+par des compagnies de mercenaires.
+\paragraph{Langues}
+La langue officielle des royaumes de l’ouest est le \emph{vethrain}.
+\paragraph{Classes}
+Les guerriers et les roublards sont les plus répandus dans ces contrées.
+\paragraph{Historiques}
+Vous pouvez choisir les historiques Artisan de guilde, Soldat ou ou Enfant des rues.
+
+\subsubsection{Les royaumes de l’est}
+Ce sont les royaumes les plus cultivés du continent. Cette région regroupe les royaumes de Caduevo, Ansaman, Dogon, Tedar et Bacongo.
+\paragraph{Langues}
+La langue officielle des royaumes de l’ouest est l’\emph{esthrain}.
+\paragraph{Classes}
+Les prêtres et magiciens sont les plus répandus dans ces contrées.
+\paragraph{Historiques}
+Vous pouvez choisir les historiques Sage ou Acolyte.
+
+\subsubsection{Les royaumes du sud}
+Ce sont les royaumes les plus riches et prospères du continent. Cette région regroupe les royaumes de Mescarol, Nergal, Merovée, Tainos et Diaguita.
+\paragraph{Langues}
+La langue officielle des royaumes de l’ouest est le \emph{sethrain}.
+\paragraph{Classes}
+Les rôdeurs et ensorceleurs sont les plus répandus dans ces contrées.
+\paragraph{Historiques}
+Vous pouvez choisir les historiques Artiste, Artisan de guilde ou Criminel.
+
+\subsubsection{Le Royaume Sylvestre}
+Il s’agit du royaume principal des \Elfes, dans une vaste forêt situé proche du centre des \Royaumes.
+\paragraph{Langues}
+La langue officielle est l’\emph{elvish}.
+\paragraph{Classes}
+Les roublards sont les plus répandus dans ces contrées.
+\paragraph{Historiques}
+Vous pouvez choisir les historiques Artiste ou Sage.
+
+\subsubsection{GrandCave}
+Il s’agit du plus grand royaume des \Nains, sous la montagne GrandCave.
+\paragraph{Langues}
+La langue officielle est l’\emph{kad-ish}.
+\paragraph{Classes}
+Les guerriers sont les plus répandus dans ces contrées.
+\paragraph{Historiques}
+Vous pouvez choisir les historiques Artisan de guilde, Noble ou Soldat.
+
+\subsubsection{Les Steppes}
+Il s’agit d’une contrée semi desertique au nord des \Royaumes peuplée par les \DemiOrcs.
+\paragraph{Langues}
+La langue officielle est le \emph{glamhoth}.
+\paragraph{Classes}
+Les barbares sont les plus répandus dans ces contrées.
+\paragraph{Historiques}
+Vous pouvez choisir les historiques Ermite ou Sauvageon.
+
+\subsection{Choix de la classe}
+De même, l’ensemble des classes n’est pas accessible aux \PJs.
+
+\subsubsection{Pour les humains}
+Les \PJs humains ont le plus de lattitude pour choisir leur classe :
+\begin{itemize}
+  \item les classes de Guerrier, Rôdeur et Roublard sont les plus communes - classes profanes ;
+  \item plus rares sont les classes de Clerc et Magicien :
+  \begin{itemize}
+    \item un \PJ Clerc doit choisir sa divinité tutellaire ;
+    \item un \PJ Magicien doit choisir son école d’apprentissage ; 
+  \end{itemize}
+  \item enfin, il est possible de jouer un Ensorceleur de lignée Draconique
+\end{itemize}
+
+\subsubsection{Pour les \Nains}
+Les \PJs \Nains sont Clerc, Guerrier ou Roublard.
+
+\subsubsection{Pour les \Elfes}
+Les \PJs \Elfes sont Clerc, Magiciens, Rôdeur ou éventuellement Ensorceleur de lignée Draconique.
+
+\subsubsection{Pour les \DemiOrcs}
+Les \PJs \DemiOrcs sont Barbares, Rôdeur ou éventuellement Clerc.
+
+\subsection{Choix de l’équipement}
+Dans le monde des \Royaumes, il y a peu de métal, et le niveau technologique est bas.\par Les armes de guerre - à l’exception de l’épée
+courte et de la hache d’armes - ne sont pas disponible à l’achat, et en posséder une n’est possible que grâce à l’historique. Les arbalètes
+n’existent pas.\par De même, les amures intermédiaires - à l’exception de l’armure de peau - et les armures lourdes ne sont pas disponible à l’achat.
+
+\end{multicols}
+
+\section{Description des \Royaumes}
+Les \Royaumes sont établis sur un continent entouré par de vaste étendues d’eaux. Ce monde est gouverné par des royaumes humains. Les \Elfes et
+les \Nains ne possèdent pas de royaume à l’image des humains, mais y vivent en paix dans leurs propres communautés.
+
+\begin{multicols}{2}
+
+\subsection{Les Légendes}
+
+\subsubsection{Les Anciens}
+À l’origine, le monde n’était pas régi par les hommes, mais par un autre peuple que les hommes appellent les Anciens. Ceux-ci possédaient la sagesse,
+connaissaient l’art de la Magie et vivaient dans des villes magnifiques. Même s’ils vivaient longtemps, les Anciens avaient peu d’enfants, et ils
+étaient peu nombreux. C’est pourquoi ils firent venir les hommes à eux, ainsi que les \Elfes et les \Nains, pour les éduquer, et pour que ceux-ci les
+servent. C’est ainsi que les hommes découvrirent l’agriculture, l’écriture, la construction et bien d’autres choses encore, car c’était le peuple le
+plus nombreux. Les \Elfes étaient plus proches des anciens et apprirent un peu de sagesse et de magie. Les \Nains travaillaient dans les mines et
+façonnaient le métal pour les anciens. Les humains devinrent civilisés, et ils vivaient dans la paix et dans le bonheur.
+
+\subsubsection{La fin de l’âge d’or}
+Les Anciens ont fini par disparaître complètement. Les hommes, les \Elfes et les \Nains se retrouvèrent seuls et incapable de vivre comme avant, car les
+Anciens n’étaient plus là pour les guider. Les merveilleuses villes tombèrent en ruine, ou furent ravagée par la guerre. L’humanité sombra dans la
+barbarie, et dut lutter pour sa survie contre elle-même, mais aussi les autres races qui peuplaient le monde, et qui elles n’avaient pas été choisies
+car les \DemiOrcs se développèrent avec la chute des anciens.
+
+\subsubsection{La découverte des Dieux}
+Les hommes, ne sachant plus quoi faire, cherchèrent leur salut dans les philosophies des Anciens. C’est ainsi que le Prophète découvrit le salut de
+l’humanité. Il s’agissait de six Principes positifs, et de leurs six Principes opposés. Ils donnèrent un nom à chacune des philosophies qui en
+découlaient, comme leurs avaient appris les Anciens. Pour le prophète, seuls l’Harmonie et l’Equilibre de tous les Principes pouvait ramener la paix
+et le bonheur. Grâce à ces Principes, ils firent venir les Dieux à eux. Chaque Dieu représentait une croyance faite à partir de ces principes.
+
+\subsubsection{Le nouvel âge}
+Grâce aux Dieux qu’ils s’étaient inventés, les hommes retrouvèrent enfin la civilisation. Ils s’unirent avec les \Elfes et les \Nains, et ils purent
+vaincre leurs ennemis, et repousser les \DemiOrcs dans les steppes désolées du nord. Car ils avaient de nouveau quelque chose à suivre, les principes
+Divins. Avec la civilisation, les hommes retrouvèrent le moyen de s’organiser, et ainsi naquirent les \Royaumes, en hommage aux Vingt Dieux qu’ils
+s’étaient créés.
+
+\subsubsection{Les Vingt Royaumes}
+Lorsque le Prophète découvrit les Principes, il créa le Cristal de l’Harmonie, dont chaque sommet représentait un des Principes, et chaque face un
+Dieu. Lorsque la paix revint, il fractionna le Cristal en autant de parties que de Dieu, et ses vingt apôtres fondèrent chacun une cité, qui devint le
+fondement d’un nouveau royaume.
+
+\subsubsection{La Magie}
+La seule connaissance qui avait été interdite aux humains par les Anciens était la Magie. Même les \Elfes, plus attirés par les mystères que les
+autres races, n’en connaissaient que les principes élémentaires. Mais, lorsque les vingt royaumes furent établis, certains hommes cherchèrent à
+retrouver le pouvoir des Anciens. Ils découvrirent des vestiges de l’âge d’or, d’anciens écrits, mais très peu d’informations sur la Magie. Seulement,
+à force de la chercher partout dans le monde, ils finirent par la trouver en eux.
+
+
+\subsection{Les Dieux}
+
+\subsubsection{Le Panthéon des Dieux}
+Le Panthéon des Dieux révérés par les humains est très ordonné : il regroupe les dieux bons, neutres et mauvais. Chaque Dieu est associé à trois
+Principes ou philosophies.
+\begin{itemize}
+  \item La Bonté comme Principe du bien.
+  \item La Foi, la Loi, la Charité, la Miséricorde et la Patience sont les Principes qui peuvent s’associer à la Bonté.
+  \item Le Mal comme Principe du mal.
+  \item L’Intolérance, la Réalité, la Cupidité, l’Impatience et le Chaos sont les Principes qui peuvent s’associer au Mal.
+\end{itemize}
+Les philosophies s’opposent deux à deux, ainsi que les Dieux. Il y a ainsi 5 dieux bons, 5 dieux mauvais, et 10 dieux neutres. Chaque dieu du bien
+s’oppose à un dieu du mal et chaque dieu neutre s’oppose à un autre dieu neutre.
+
+\subsubsection{Les Dieux Bons}
+Chaque Dieu du Bien est caractérisé par le principe de la Bonté. Mais chacun des 5 Dieux a au moins un principe différent des autres.
+\paragraph{Esus, Dieu de la Pureté}
+Ses principes sont : Bonté, Foi et Loi. Le Dieu de la Pureté est le dernier Dieu Bon. Ses adeptes recherchent la pureté du corps, mais aussi celle de
+l’âme. Ils ont délaissé tous les plaisirs matériels comme le confort, la bonne chère, et vivent dans l’abstinence. Leur vie se passe en général dans
+la méditation pour que leur esprit soit aussi pur que leur corps. Certains y font exception, ce sont des élus dont le destin est tout autre,
+parcourant le monde à la recherche du Mal sous toutes ses formes pour l’éradiquer : ils sont appelés les Paladins Blancs.
+\paragraph{Bellone, Dieu de la Sagesse}
+Ses principes sont : Bonté, Loi et Charité. Le Dieu de la Sagesse est un Dieu vénéré par les hommes de savoir. Ses fidèles veulent changer les lois
+des royaumes pour qu’elles soient plus humaines. Leur principale croyance est que les hommes sont tous égaux, et donc veulent abolir l’esclavage sous
+toutes ses formes. Mais ils n’ont que peu de pouvoir, car ils sont peu nombreux. Leurs actions sont purement politiques, et pratiquement chaque roi se
+fait conseiller par un sage fidèle à ce Dieu, appelé un Érudit.
+\paragraph{Indrani, Déesse de la Compassion}
+Ses principes sont : Bonté, Charité et Miséricorde. La Déesse de la Compassion œuvre elle aussi pour le bien de l’humanité, mais surtout pour aider
+les faibles et le miséreux. Ses fidèles s’occupent de faire la charité, de donner à manger aux plus démunis dans les villes. Certains d’entre eux vont
+à travers les royaumes pour porter la parole de la compassion, ce sont les Apôtres de la Paix. La Déesse de la Compassion est en quelque sorte le
+dernier espoir du pauvre.
+\paragraph{Selène, Déesse de la Vie}
+Ses principes sont : Bonté, Miséricorde et Patience. Les adeptes de la Déesse de la Vie s’occupent des Maisons de la Vie. Ces maisons sont en quelque
+sorte des hôpitaux dans lesquels les gens se font soigner, mais aussi et surtout dans lesquels les femmes donnent naissance à leurs enfants. Les
+Sages-femmes sont les principales suivantes de cette Déesse.
+\paragraph{Parvati, Déesse de l’Amour}
+Ses principes sont : Bonté, Patience et Foi. La déesse de l’Amour prône l’amour des autres. Ses rares fidèles souhaitent que tous les humains s’aiment
+les uns les autres, afin de vivre comme au paradis, dans un monde d’où le Mal serait banni. Cette Déesse a peu de fidèles, et beaucoup la confonde
+avec la Déesse du Plaisir. Certains de ses suivants parcourent le monde pour porter un message d’amour universel, les Prêcheurs.
+
+\subsubsection{Les Dieux Neutres}
+Chaque Dieu Neutre combine 3 des dix principes neutres.
+\paragraph{Lokapol, Dieu de la Conquête}
+Ses principes sont : Foi, Loi et Intolérance. Le Dieu de la Conquête n’a qu’un seul commandement : la guerre sainte. Ses fidèles ont longtemps essayé
+d’assurer leur domination sur les \Royaumes par la guerre ou la religion. Aujourd’hui, il n’en reste que peu, même si on raconte qu’un ordre secret
+demeure, celui des Templiers.
+\paragraph{Taranis, Déesse de la Justice}
+Ses principes sont : Loi, Intolérance et Impatience. La Déesse de la Justice est là pour faire respecter les lois. Ses fidèles se trouvent dans
+pratiquement tous les royaumes, où ils exercent leur pouvoir implacable. Trois Royaumes résistent à son pouvoir, ceux dédiés à la Pureté, à la
+Rédemption et au Vol. Mais pour pouvoir agir à sa guise, La Déesse de la Justice dispose d’une institution redoutée entre toutes, l’Inquisition et ses
+Inquisiteurs.
+\paragraph{Nout, Déesse de l’Offrande}
+Ses principes sont : Loi, Charité et Impatience. La Déesse de l’Offrande demande à ses fidèles de toujours avoir quelque chose à offrir aux personnes
+qu’ils rencontrent. Mais des adorateurs d’autres Dieux profitent de ces commandements et cherchent à conduire son royaume à la ruine. Elle n’a plus
+aujourd’hui de croyants en dehors de son royaume.
+\paragraph{Athar, Déesse de la Pauvreté}
+Ses principes sont : Charité, Impatience et Réalité. a Déesse de la Pauvreté prône le dénuement et une vie communautaire où tout est à chacun. Son
+royaume est très pauvre, et cette Déesse n’a pas de lieu de prière et de vénération à l’image des autres dieux. Ses fidèles ne se font jamais
+remarquer mis à part les prêcheurs Evangélistes errants.
+\paragraph{Portunis, Déesse de la Guérison}
+Ses principes sont : Charité, Miséricorde et Réalité. La Déesse de la Guérison est la Déesse des médecins. Ces derniers travaillent rarement dans les
+Maisons de la Vie, mais plutôt pour leur compte et soignent les riches. Ceux qui vénèrent la Déesse de la Guérison avec ardeur profitent de leur
+situation pour pratiquer dans les Maisons de Paix. Mais d’autres se dévouent également pour soigner le peuple, les Chevaliers Hospitaliers.
+\paragraph{Durga, Déesse de la Souffrance}
+Ses principes sont : Miséricorde, Réalité et Chaos. La Déesse de la Souffrance impose une croyance à ses fidèles : grâce à leurs propres souffrances,
+ils sont capables de soulager celles des autres. Cette doctrine est malheureusement très mal vue par les autres gens, ce qui fait que bien souvent les
+fidèles de cette Déesse sont persécutés (à leur plus grande joie). Certains Martyrs essayent de soulager les douleurs des gens.
+\paragraph{Nodons, Dieu de la Rédemption}
+Ses principes sont : Miséricorde, Patience et Chaos. Le Dieu de la Rédemption est le Dieu du pardon. Ses fidèles pensent qu’il faut pardonner aux gens
+qui ont péché, et contestent éternellement les décisions des juges entraînant une condamnation. C’est pour cela que ses fidèles sont mal considérés
+par les autorités et la justice.
+\paragraph{Bormo, Dieu du Profit}
+Ses principes sont : Patience, Chaos et Cupidité. Le Dieu du Profit est le Dieu du commerce. Faire des affaires n’est pas le seul commandement de ce
+Dieu, car pour faire des affaires, il faut être au moins deux, c’est pourquoi le profit ne peut s’envisager qu’avec le temps.
+\paragraph{Chennon, Dieu de la Richesse}
+Ses principes sont : Patience, Foi et Cupidité. Le Dieu de la Richesse est bien différent du Dieu du Profit. En effet, la richesse est toujours
+accordée aux riches, au détriment des pauvres. Pour ses fidèles, l’appât du gain doit être la seule motivation.
+\paragraph{Rudra, Dieu du Vol}
+Ses principes sont : Foi, Cupidité et Intolérance. C’est le Dieu des Voleurs. Ses fidèles n’ont qu’un seul but, c’est de dérober tout ce qui les
+intéresse, mais également tout ce qui peut être profitable. Ils se moquent royalement des lois, et des autres.
+
+\subsubsection{Les Dieux Mauvais}
+Les Dieux du Mal représentent toujours une philosophie opposée au Bien, et réciproquement. Ces Dieux ne sont pas vénérés en général ouvertement, même
+si les fidèles de la Déesse du Plaisir et du Dieu de la Guerre sont largement tolérés.
+\paragraph{Rudra, Dieu du Vol}
+Ses principes sont : Kubera, Dieu de la Mort. Le Dieu de la Mort est également le Dieu des assassins. Mais il ne s’agit pas de vulgaires tueurs. Ses
+adeptes préparent toujours soigneusement leur action, pour que la victime soit consciente de ce qui va leur arriver, tout en restant impuissante à
+changer les choses. Ainsi, le Meurtre est un art raffiné, pratiqué par les Assassins.
+\paragraph{Varuna, Dieu de la Haine}
+Ses principes sont : Mal, Impatience et Réalité. Le Dieu de la Haine cherche à attiser les dissensions entre les hommes. Ses fidèles ne se montrent
+jamais à visage découvert, mais fréquentent les rois afin de les conseiller et de les pousser sur le chemin de la Haine. Ils organisent des complots
+afin de pousser les royaumes les uns contre les autres.
+\paragraph{Feronia, Déesse du Plaisir}
+Ses principes sont : Mal, Réalité et Chaos. La Déesse du plaisir porte bien son nom. Ses adeptes recherchent le plaisir sous toutes ses formes, mais
+seulement le plaisir corporel : confort, bonne chère mais surtout plaisir charnel. C’est pourquoi elle est vénérée dans les Maisons de Joie, et
+qu’elle est tolérée.
+\paragraph{Arduina, Déesse de la Tentation}
+Ses principes sont : Mal, Chaos et Cupidité. La Déesse de la Tentation est elle aussi souvent confondue avec la Déesse du Plaisir. Mais ses fidèles ne
+cherchent pas le plaisir, ils sont toujours remplis d’envie. L’envie, c’est la femme, ou la maison du voisin, mais c’est aussi partir voyager. Et ils
+sont prêts à tout pour assouvir leurs envies. D’ailleurs, le viol est considéré comme une des tentations les plus nobles.
+\paragraph{Brontès, Dieu de la Guerre}
+Ses principes sont : Mal, Cupidité et Intolérance. Le Dieu de la Guerre est vénéré, car il y a souvent des guerres. Ses fidèles font partie des armées
+régulières, mais beaucoup de mercenaires lui envoient leurs prières. Les rois ont toujours près d’eux un conseiller fidèle à ce Dieu, car son grand
+principe est de faire la guerre pour avoir la paix.
+
+\subsubsection{Le Clergé}
+Tous les Dieux ont des fidèles, et des temples consacrés dans lesquels ils peuvent se réunir pour célébrer les rites de leur Dieu.\par Plusieurs Dieux
+sont craints par la population, car leurs adeptes sont recherchés. Il s’agit des Dieux de la Haine, de la Tentation, du Meurtre, des Voleurs, et de la
+Souffrance. D’autres Dieux sont très mal vus par la population : les Dieux du Plaisir, de la Rédemption et de la Pureté. Leurs fidèles sont tolérés
+par les autres.\par Certains Dieux n’ont pas qu’un temple afin de montrer leur philosophie. Ainsi, le Dieu de la Pureté dispose de ses Paladins
+Blancs, le Dieu de la Justice de ses Inquisiteurs, ou encore les Prêtres Rouges du Dieu de la Guerre ; tandis que d’autres Dieux ont établi des
+institutions plus ou moins officielles : la Maison de Paix de la Déesse de la Vie, les Guildes des Marchands du Dieu des Profits, la Confrérie du Dieu
+des Voleurs, la Fraternité du Sang du Dieu du Meurtre, la Maison de la Joie de la Déesse du Plaisir.\par Les prêtres sont peu nombreux au vu de la
+population, et seules les trois Villes-Libres des Royaumes peuvent se vanter d’avoir un temple dédié à chaque Divinité. Le pouvoir des Dieux s’exprime
+à travers la Foi de ses fidèles, même si la Foi n’est pas une philosophie de tous les Dieux. C’est grâce à cette foi, et à un comportement exemplaire,
+qu’un prêtre peut réaliser des miracles. Mais ces derniers sont rares, et le prêtre bien souvent n’a pas de véritable pouvoir.
+
+\end{multicols}
+
+\begin{dndtable}[llXll]
+	\textbf{Divinité} & \textbf{Alignement} & \textbf{Domaines} & \textbf{Arme} & \textbf{Opposé}\\
+	Esus (Pureté) & Loyal Bon & Bien, Loi, Lumière & Épée longue & Plaisir\\
+	Bellone (Sagesse) & Loyal Bon & Bien, Loi, Connaissance & Bâton & Tentation\\
+	Indrani (Compassion) & Neutre Bon & Bien, Connaissance, Soin & Bâton & Guerre\\
+	Selène (Vie) & Neutre Bon & Bien, Protection, Lumière & & Haine\\
+	Parvati (Amour) & Loyal Bon & Bien, Protection, Lumière & & Plaisir\\
+	Lokapol (Conquête) & Loyal Neutre & Lumière, Loi, Mort & Morgenstern & Souffrance\\
+	Taranis (Justice) & Loyal Neutre & Loi, Mort, Destruction & Fléau d’armes & Rédemption\\
+	Nout (Offrande) & Loyal Neutre & Loi, Connaissance, Destruction & Bâton & Profit\\
+	Athar (Pauvreté) & Neutre & Connaissance, Destruction, Force & Bâton & Richesse\\
+	Portunis (Guérison) & Neutre & Connaissance, Soins, Force & & Vol\\
+	Durga (Souffrance) & Chaotique Neutre & Soins, Force, Chaos & Fléau d’armes & Conquête\\
+	Nodons (Rédemption) & Chaotique Neutre & Soins, Protection, Chaos & Bâton & Justice\\
+	Bormo (Profit) & Chaotique Neutre & Protection, Chaos, Duperie & Dague & Offrande\\
+	Chennon (Richesse) & Neutre & Protection, Lumière, Duperie & Dague & Pauvreté\\
+	Rudra (Vol) & Neutre & Lumière, Duperie, Destruction & Épée courte & Guérison\\
+	Kubera (Mort) & Mauvais & Mal, Mort, Destruction & Dague & Vie\\
+	Varuna (Haine) & Mauvais & Mal, Destruction, Force & Fléau d’armes & Amour\\
+	Feronia (Plaisir) & Chaotique Mauvais & Mal, Force, Chaos & & Pureté\\
+	Arduina (Tentation) & Chaotique Mauvais & Mal, Chaos, Duperie & & Sagesse\\
+	Brontès (Guerre) & Mauvais & Mal, Mort, Duperie & Épée longue & Compassion
+\end{dndtable}
+
+\begin{multicols}{2}
+
+\subsection{Les Royaumes}
+
+\subsubsection{Le Monde Civilisé}
+Le monde civilisé ne représente qu’une partie de l’univers dans lequel les joueurs vont voyager. Cela représente le pays d’origine des joueurs, et les
+contrées immédiatement voisines. Tous les joueurs sont originaires des \Royaumes, et ils ne connaissent rien du monde extérieur, car ces royaumes
+vivent pratiquement sans contact avec les autres peuples, mis à part quelques exceptions.\par Les voyages sont rares dans les royaumes. En effet, les
+gens du peuple se déplacent à pieds, tandis que les marchandises sont transportées par des charrettes tirées par des bœufs.\par Les \Royaumes ont vu
+le jour avec le nouvel âge. Initialement, chaque royaume était affilié à un Dieu, et chaque royaume avait sa capitale, une cité également dédiée à ce
+Dieu. Le royaume et la cité portent le même nom.\par  Mais depuis, de l’eau a coulé sous les ponts. Les royaumes se sont peu à peu éloignés de leurs
+croyances initiales. Trois de ces royaumes se sont affaiblis, ceux dédiés au Dieux de l’Offrande, de la Pauvreté et de la Conquête. Pendant ce temps,
+d’autres royaumes ont acquis du pouvoir, surtout ceux dédié aux Dieux de la Richesse et du Profit. C’est ainsi que trois villes indépendantes,
+appelées Villes-Libres sont sorties de la terre, situées à des carrefours de routes entre les royaumes. Celles-ci ont pris de l’importance grâce au
+commerce.\par Aujourd’hui, d’autres royaumes sont en train de s’effilocher et de perdre leur pouvoir. Ce sont les royaumes dédiés à la Compassion, à
+la Souffrance, à la Rédemption et à la Haine.\par Cependant, il reste toujours des lieux inconnus, mystérieux à l’intérieur des royaumes. Ces lieux
+peuvent être difficiles d’accès, ou bien tabous. Il existe toujours des légendes sur ces lieux, et personne ne s’est décidé à les vérifier, ou n’est
+revenu pour en parler.
+\paragraph{Politique}
+Chaque royaume est régi par roi, depuis son palais établi dans la cité du royaume. Le roi est le garant des lois et des libertés, et son devoir est
+d’assurer la protection de son peuple. Il édicte les lois, rend la justice et collecte les taxes. L’armée royale est une armée d’apparat, servant
+de garde d’honneur lors des déplacements du monarque. Le royaume est divisé en comtés, les comtes sont les représentants directs du roi et
+agissent en son nom. Ils entretiennent de petites compagnies de soldats  pour assurer la sécurité contre les bandits de grand chemin et les raids des
+\DemiOrcs. Une deuxième force politique est constituée par les nombreuses guildes assurant le commerce et les échanges. De nombreuses denrées
+sont soumises à des patentes commerciales qui sont la propriété d’une guilde, comme la soie, les céréales ou le cuir. Les communications sont assurées
+dans l’ensemble des royaumes par la guilde des messagers, et le transport des marchandises par la guilde des charretiers. La troisième force
+politique est détenue par les clergés. Chaque royaume a son clergé, et le roi est toujours conseillé par un prêtre.
+\paragraph{Économie}
+La richesse des royaumes vient de son agriculture. Il y a peu de ressources naturelles en minerai, et le fer y est très cher. Les royaumes du nord ont
+une terre pauvre et rocailleuse, et fournissent principalement de la viande et de la laine. Les royaumes de l’ouest ont une terre riche et fertile.
+Ils fournissent principalement des céréales, mais également du sel et des minerais de fer, à l’origine de leurs richesses. Les royaumes de l’est sont
+très plats, et leurs terres sont propices à l’élevage Ils fournissent principalement de la viande, du cuir et des céréales. Les royaumes du sud sont
+pauvres et peu peuplés, et fournissent principalement de la soie et du vin. 
+
+\subsubsection{Quelques Royaumes}
+La population des royaumes est  entièrement constituée d’humains, car les autres races ne se mélangent pas à eux.
+\paragraph{Marienad}
+C’est la cité-royaume d’Esus, Dieu de la Pureté, faisant partie des royaumes du nord. C’est la plus belle ville des Royaumes, car ses maisons sont
+toutes bâties en pierre blanche et très bien faites, mais dans un style le plus dépouillé qu’il soit, ce qui est paradoxal. Au centre de la ville se
+trouve un grand bâtiment, le temple d’Esus, et au centre de ce bâtiment, se trouve la \emph{Fontaine de Pureté}. On raconte que quiconque boit l’eau
+de cette fontaine se trouve instantanément purifié. Mais les « Purs » gardent la fontaine jour et nuit, et seuls ceux qui sont en pèlerinage pour la
+pureté peuvent y accéder. Il existe une école de magie, la \emph{Tour Blanche}, qui enseigne principalement la divination. 
+\paragraph{Ansaman}
+Cité-royaume dédiée à Bellone, Dieu de la Sagesse, faisant partie des royaumes de l’est. Ctte ville regorge d’érudits de toutes origines désireux
+d’accroître leurs connaissances. Ils se retrouvent dans un édifice spécialement conçu pour cela, la \emph{Bibliothèque}, bâtiment dans lequel il est
+possible de trouver toute œuvre manuscrite. C’est dans cette cité que se trouve la plus grande école de magie, la Tour Grise, dans laquelle toutes les
+disciplines sont étudiées.
+\paragraph{Caduevo}
+Cité-royaume dédiée à Indrani, Déesse de la Compassion, faisant partie des royaumes de l’est. Elle recueille depuis toujours des réfugiés venant des
+différents royaumes. Ils sont accueillis dans une institution appelée le \emph{Refuge}, qui les aide et leur trouve une nouvelle situation.
+\paragraph{Nergal}
+Nergal est la cité-royaume de Sélène, Déesse de la Vie, faisant partie des royaumes du sud. C’est dans cette ville que viennent étudier tous les
+médecins des \Royaumes, dans ce qui s’appelle la \emph{Maison de Paix}, un lieu ou les médecins apprennent et exercent leurs arts. Il y existe
+également une école de magie, non spécialisée. 
+\paragraph{Mescarol}
+C’est la cité-royaume de Parvati, Déesse de l’Amour, faisant partie des royaumes du sud. C’est la ville où les nobles viennent se marier, car il est
+dit qu’un mariage célébré à Mescarol apportera l’amour aux mariés pour leur vie entière. C’est dans cette ville également que se trouve la \emph{Place
+de la Concorde}, place sur laquelle les gens s’aiment les uns les autres. C’est la seule ville qui n’a pas de service de maintien de l’ordre.
+\paragraph{Atlans}
+C’est la cité de Nout, Déesse de l’Offrande, faisant partie des royaumes du nord. Cette vile accorde à chaque voyageur de passage une nuit dans le
+palais. De nombreux pèlerins y viennent, afin de déposer un don sur l’\emph{Autel}.
+\paragraph{Teda}
+C’est la cité d’Athar, Déesse de la Pauvreté, faisant partie des royaumes de l’est. Cette ville est pauvre, comme tout le royaume. Ces habitants sont
+peu nombreux et beaucoup sont des mendiants. Ils se regroupent tous les soirs au centre de la ville, sur la \emph{Place de la Miséricorde}.
+\paragraph{Dogon}
+C’est la cité de Portunis, Déesse de la Guérison, faisant partie des royaumes de l’est. C’est dans cette ville que se trouve le Dispensaire, un lieu
+ou quiconque peut se faire soigner. C’est le lieu de pèlerinage des gens gravement malades ou incurables.
+\paragraph{Samarand}
+C’est la cité de Bormo, le Dieu du Profit, faisant partie des royaumes de l’ouest. C’est la cité la plus peuplée des Royaumes, et également celle qui
+se développe le plus. Cette ville est dédiée au commerce, et de nombreuses caravanes de marchandises y transitent. Il est possible dans cette ville de
+trouver n’importe quelle marchandise, en se rendant au Grand Bazar, le plus grand marché des \Royaumes. Il y existe également une école de magie,
+spécialisée en transmutation.
+\paragraph{Vogoul}
+C’était la cité de Lokapol, le Dieu de la Conquête, faisant partie des royaumes du nord. Elle a été désertée après de nombreuses attaques des
+\DemiOrcs. C’était là que se trouvait l’\emph{Arène}, un lieu ou on voyait s’affronter les prisonniers capturés lors des raids. C’était également dans
+cette ville que se trouvait la Tour Rouge, une école de magie spécialisée dans l’évocation.
+\end{multicols}
+
+\chapter{Les pirates}
+
+\begin{multicols}{2}
+
+\section{Recrutement}
+Les \PJs sont de jeunes conscrits (humains) appelés à servir dans l’armée. Certains sont volontaires, d’autres forcés, mais tous se retrouvent
+finalement à la caserne d’entraînement des \emph{Deux Lames}.\par Les \PJs sont encore en apprentissage, c’est à dire qu’ils commencent sans
+historique. Un millier de conscrits viennent d’être rassemblés, en cette fin d’automne, en vue d’une opération militaire mais personne ne sait
+exactement de quoi il en retourne. Ils sont répartis par soixante dans des baraquements assez sommaires.\par Le premier jour, les recrues se voient
+attribuer leur paquetage – un grand sac en toile contenant  un sac de couchage, une boîte d’allume-feux, une gamelle, une gourde et des vêtements de
+rechange –, ainsi qu’une avance de solde (5 pa). Ensuite, ils passent des tests simples avec une épée en bois ou un arc avant d’être répartis en
+groupe en fonction de leurs capacités : d’un côté ceux qui savent manier un arc ou qui sont plutôt adroits en tir, et le restant de l’autre .\par
+
+Les jeunes recrues sont réparties en phalanges de dix soldats, sous les ordres d’un \textbf{Oban} \emph{(chef de phalange ou caporal)}. Six phalanges
+forment une section, sous les ordres d’un \textbf{Oden} \emph{(chef de groupe, ou sergent)}. Nos \PJs se retrouvent dans la même section,
+composé de quatre phalanges de fantassins et de deux phalanges d’archers. Ils se retrouvent ainsi à loger dans le même baraquement et peuvent faire
+connaissance.
+
+\begin{quotebox}
+	Il est possible toutefois d’intégrer dans le groupe un personnage comme un \Nain, apprenti forgeron au camp d’entraînement, ou un \Elfe, faisant
+	partie d’une petite délégation arrivée du royaume sylvestre. Ces \PJs commencent normalement au niveau 1, avec historique et équipement.
+\end{quotebox}
+
+\section{Entraînement}
+L’Oden de la section est chargé de leur apprendre la discipline militaire (marche au pas, garde à vous, saluts).\par Le premier mois se passe ainsi,
+en longues marches avec un paquetage chargé de pierres, des stations debout pendant plusieurs heures sous la pluie, des réveils  nocturnes.\par
+Ensuite, l’entraînement avec différentes armes commence. Il s’agit surtout du maniement simple d’une épée courte (attaque, parade), et du tir à l’arc.
+Quelques manœuvres avec une lance sont aussi effectuées. \par Les \PJs sachant manier l’arc peuvent passer une épreuve de tir. Pour cela, ils doivent
+toucher une cible à 10 m avec 4 flèches sur 5, puis à 25 m avec au moins 2 flèches sur 5 (la portée implique un désavantage au tir). La cible est
+petite et a une CA de 11.\par La formation dure tout l’hiver. Les recrues touchent leur solde de 3 PA par décade, et les \PJs peuvent ainsi épargner
+de 2 PO plus \dice{1d3} PO en cas de réussite d’un jet de Volonté DD 12. Tous ces entraînements permettent aux \PJs de finir leur apprentissage et de
+décider de leur historique. Ceux qui le souhaitent peuvent choisir l’historique « Soldat », qu’ils compléteront une fois l’aventure terminée. Ils
+obtiennent de plus la maîtrise des armures légères et des boucliers, ainsi que de l’épée courte, s’ils n’en disposaient pas déjà.
+
+\section{L’expédition punitive}
+\subsection{Le départ}
+Ce n’est qu’au début du printemps qu’un Haut-Commandant de l’armée arrive au camp militaire. Ayant rassemblé toutes les recrues, il annonce enfin ce
+que tout le monde attend : la campagne militaire contre les pirates.\par Il s’agit d’aller détruire la base arrière des pirates qui s’attaquent aux
+navires commerçant entre les \Royaumes et l’Empire des Îles.\par Les soldats sont équipés d’une épée courte, d’un bouclier en bois, d’une dague et
+d’une armure de cuir cloutée.\par Les archers sont équipés d’un arc court, d’un carquois rempli de 10 flèches, d’une épée courte, d’une dague et d’une
+armure de cuir souple.\par Tout cela en plus de leur paquetage fourni à leur arrivée.
+\subsection{Embarquement}
+Les soldats voyagent tout d’abord à pied jusqu’au port de la Cité-Royaume de Samarand, ce qui prend un peu moins de deux décades, les soldats ayant
+pris l’habitude d’effectuer de longues marches pendant leur entraînement.\par Ensuite, chaque section de nouvelle recrue est assigné à un navire, et
+trois escadres de dix navires sont formées. Comme les Royaumes n’ont pas beaucoup de navires de guerre, les escadres sont en fait formées par des
+navires marchands, escortés par un seul navire de guerre. Les \PJs ont pris place à bord de l’Espérance, un des navires marchands de la seconde
+escadre. C’est dans ce navire que le commandant de l’escadre a pris ses quartiers.
+\section{Bataille navale}
+\subsection{Voyage}
+Les trois escadres prennent la mer, chacune ayant pour instruction d’attaquer un des ports des pirates. Le temps s’annonce clément, et un voyage sans
+encombres.\par La navigation dure déjà depuis plusieurs jours, et les soldats s’ennuient beaucoup. Les vents sont favorables, et le temps est clément,
+heureusement.\par Puis, l’effervescence monte : des bateaux pirates ont étés vus, et même ils prennent en chasse l’escadre. Le navire de guerre
+ralenti pour s’interposer, et après un violent combat, les trois bateaux pirates prennent le dessus, et le coulent.\par La chasse reprend, et les
+pirates rattrapent peu à peu les autres navires de l’escadre, dont l’Espérance, un peu à la traîne. C’est alors que l’escadre manœuvre pour affronter
+les bateaux pirates venant à l’abordage.\par
+\subsection{L’attaque des pirates}
+Les \PJs ont ordre de protéger le timonier pendant l’attaque - celui qui tient la barresur le château arrière du navire. Ils essuient une volée de
+flèches (\dice{1d4+1}, attaque +3, \dice{1d6} dégats perforants) au début du combat. Ensuite, deux pirates (bandits) sautent du bateau pirate sur le
+château arrière en effectuant un jet de Dextérité (Acrobaties) pour le saut DD 12 (en cas d’échec le pirate se retrouve au sol), et 2 rounds plus
+tard, un pirate (bandit) monte depuis le pont.\par
+
+\begin{quotebox}
+	\textbf{Tactique}. Les deux premiers pirates tentent de prendre en tenailles le même adversaire, si c’est possible. Leur objectif est d’atteindre le
+	timonier pour l’éliminer. Le dernier pirate charge le premier adversaire sur son chemin avant de venir prêter main forte à ses camarades.
+\end{quotebox}
+
+Pour le reste, le combat tourne à l’avantage des soldats, qui parviennent à repousser les pirates. Deux bateaux pirates ont coulé, et trois navires
+sont très endommagés.\par Le commandant de l’escadre décide alors de poursuivre avec six navires seulement, et regroupe les blessés dans les autres.
+Le bateau pirate pris reste également en arrière.\par
+
+\section{Débarquement}
+\subsection{Tactique d’invasion}
+Le commandant de l’escadre a pu faire parler des prisonniers, et il a mis au point une tactique pour attaquer le port des pirates. Il s’agit de
+s’emparer du phare en avant du port, qui sert de tour de guet. Le commandant souhaite attaquer le port à l’aube, et il a besoin qu’un petit groupe de
+soldats s’empare ce phare pendant la nuit. Les \PJs sont évidemment désignés volontaires pour s’en occuper. S’ils ne sont pas assez nombreux,
+ils sont accompagnés de soldats pour constituer un groupe de 5 combattants, dirigés par un \textbf{Oban}. Une hache d’armes et une armure d’écailles
+sont fournis en plus de l’équipement, pour les volontaires.\par Les \PJs sont débarqués sur une plage, avec un Bertord, l’Oban qui les dirige.
+Cela se fait de nuit, pour éviter d’être repérés. La plage est déserte, et l’accostage n’est pas aisé du fait de l’obscurité. Les \PJs se
+retrouvent mouillés. Bertord donne l’ordre de rester silencieux et de ne pas faire de lumière En chemin, ils croisent une patrouille de gardes (trois
+bandits). L’un des gardes porte une lanterne à capote à la main. La lanterne éclaire le chemin devant eur (un cône de 18 m), et plus faiblement un
+cône de 36 m. Les \PJs devraient voir la patrouille les premiers, et préparer une embuscade. Les gardes subissent un désavantage pour leur jets
+de Perception.
+
+\begin{quotebox}
+	\textbf{Tactique}. Si les \PJs attaquent à distance, le garde portant la lanterne l’oriente dans la direction supposée de l’attaque, et les
+	deux autres gardes chargent. Si les \PJs attaquent au contact, le garde lâche sa lanterne pour se battre, et les pirates restent groupés pour
+	éviter d’être pris en tenaille.
+\end{quotebox}
+
+\subsection{Le phare}
+Les \PJs arrivent enfin au phare. Il a l’air désert. Bertord explique que l’objectif est de neutraliser les occupants du phare, pour les
+empêcher de donner l’alerte. Aucun ne doit s’enfuir.
+
+\begin{paperbox}{ }
+	Vous arrivez enfin devant le phare, qui se tient en haut d’un petit promontoire. Sa silhouette noire masque les étoiles, et la brise de mer se fait
+	sentir. Le ressac de l’océan masque le bruit des pas du groupe s’approchant du bâtiment. Aucune lumière ne filtre à travers les volets clos, pas plus
+	que du sommet de la tour.
+\end{paperbox}
+
+Il y a 6 occupants dans le phare : une vigie (bandit) au sommet, et 5 autres gardes (bandits) qui dorment. Le commandant a préparé un plan : un ou
+deux \PJs doivent monter en haut, pour éliminer la vigie, tandis que Bertord et les autres \PJs s’occupent des hommes endormis.\par Une seule porte
+est visible. Elle est en bois, et verrouillée \emph{(CA 15, PV \dice{3d10}, DD 18 pour enfoncer, DD 15 pour crocheter)}. Bertord a pris une hache mais
+il sait que cela ne sera pas discret, même si le ressac assourdi les bruits : pour chaque coup de hache ou chaque essai pour enfoncer, faire un jet de
+Perception DD 10 pour les gardes (ils sont endormis, ce qui équivaut à un DD 20), et DD 21 pour la vigie.\par Une fois la porte du phare ouverte, les
+\PJs entrent dans la pièce commune qui sert de salle à manger et de cuisine. La pièce est plongée dans l’obscurité totale. Il y a une table au centre,
+plusieurs chaises ou tabourets, un fourneau dans le coin droit. En face, 2 portes en bois (la porte de la réserve à droite, et celle de la tour à
+gauche). À gauche, une porte en bois (celle du dortoir). Les portes ne sont pas verrouillées.
+
+\begin{quotebox}
+	Si un des gardes se réveille, il commence par écouter ce qu’il se passe pendant 1 round, réveille une autre garde le 2e round, et prends son arme. Si
+	les \PJs entrent dans le dortoir, les autres gardes se réveillent le round suivant. Si les \PJs tardent, les gardes enfilent leurs
+	armures en un tour, et ensuite entrent dans la pièce principale. L’un deux essayera de s’enfuir pour donner l’alerte.
+\end{quotebox}
+
+Pour se battre, les \PJs auront besoin de lumière pour ne pas subir un désavantage à leurs jets d’attaque.\par L’escalier montant en haut de la
+tour est un escalier en colimaçon, montant sur une hauteur de près de 20 mètres. Le haut de l’escalier est fermé par une trappe. Si les \PJs
+veulent monter en silence, faire jouer un jet de Dextérité (Discrétion) contre la Perception de la vigie, avec un avantage pour les \PJs (à cause du
+bruit de l’océan et de la trappe). En cas d’échec, la vigie est sur ses gardes et frappe le premier qui ouvre la trappe. L’éclairage en haut du phare
+occasionne un désavantage aux jets d’attaque.
+
+\section{Les prisonniers}
+Après avoir pris le phare, Bertord indique aux \PJs que la première partie de la mission est accomplie. Mais il leur reste une deuxième action
+à accomplir : aller délivrer des agents qui ont été fait prisonniers par les pirates.\par Pour cela, il faut aller jusqu’au bâtiment servant de prison
+situé à l’extérieur du port, d’après les pirates qui ont été questionnés. Bertord compte se faire passer pour un pirate et son escorte, afin de
+pouvoir pénétrer dans le bâtiment, et s’en rendre maître par la force. Il compte utiliser certaines des affaires des gardes du phare pour se grimer en
+pirate.\par Le trajet entre le phare et la prison se passe sans aucune rencontre, et le bâtiment se repère facilement grâce à ses fenêtres étroites
+munies de barreaux.
+
+\subsection{La prison}
+Le groupe arrive devant le bâtiment peu avant l’aube.
+
+\begin{paperbox}{ }
+	Le bâtiment est massif, avec de petites fenêtres munies de barreaux. Une solide porte en chêne semble la seule entrée du bâtiment. Un peu de lumière
+	filtre des deux fenêtres entourant la porte.
+\end{paperbox}
+
+Bertord propose de frapper à la porte et de demander à voir les prisonniers. Un bon motif est suffisant pour leur faire ouvrir la porte, mais si le
+jet de Charisme (Persuasion) DD 10 est raté, les gardes sont soupçonneux. À l’intérieur, il y a 3 gardes ainsi que le geôlier. 2 des gardes sont
+encore assis autour d’une table, une partie de dés en cours.\par Une fois à l’intérieur, l’Oban demande à ce qu’on lui remette les prisonniers. C’est le
+signal convenu pour passer à l’attaque. Si le jet de Persuasion a été réussi, le groupe a droit à un round de surprise.
+
+\subsection{Évasion}
+Une fois débarrassés des gardes, Bertord récupère les clefs des geôles et les ouvre. Il en fait sortir 3 personnes visiblement affaiblies par la
+détention. Albrafeust en fait partie. Les prisonniers s’arment avec les épées des gardes. Un coffre fermé à clé contient les possessions des
+prisonniers.\par L’aube s’étant levée, le débarquement de l’armée est imminent. Bertord indique qu’il est temps de se replier sur le phare.
+
+\section{Épilogue}
+L’arrivée des navires de l’escadre prend les pirates au dépourvu. La résistance est faible, et les soldats prennent la ville dans la journée.\par La
+bataille s’achève, et les soldats prennent le chemin du retour, par mer puis par terre.\par Une fois retourné au camp, les \PJs sont décorés
+pour avoir pris le phare et libéré les agents prisonniers, et se voient remettre une prime de 60 PO.\par Pour la participation à cette campagne
+militaire, les \PJs ont droit à une récompense de \XP{50}. De plus, ils sont considérés comme « réservistes » et ils peuvent garder une épée
+courte, une dague, un bouclier et une armure au choix (une armure de cuir (souple ou cloutée) ou d’écailles) en plus de leur paquetage.
+
+\pagebreak
+\section{Les PNJs}
+
+\begin{monsterbox}{Bertord}
+	\begin{hangingpar}
+		\textit{Soldat (humain) de taille M, neutre}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = {16 (armure d’écailles, bouclier)},
+	hitpoints  = \dice{3d8 + 3},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{15},
+	CON = \stat{12} 
+	]
+	\dndline%
+	\details[%
+	skills= Intimidation +2,
+	senses= Perception passive 10,
+	languages = {bas-thrain, nothrain},
+	challenge= 1/4
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+2} dégâts perforants.
+	\end{monsteraction}
+	\begin{monsteraction}[Hache d’armes]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d8+2} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, armure d’écailles, bouclier en bois, hache d’armes, \dice{3d6} PA.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Soldat}
+	\begin{hangingpar}
+		\textit{Soldat (humain) de taille M, neutre}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = {16 (armure d’écailles, bouclier)},
+	hitpoints  = \dice{2d8 + 2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{12},
+	CON = \stat{12} 
+	]
+	\dndline%
+	\details[%
+	senses= Perception passive 10,
+	languages = bas-thrain,
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, armure d’écailles, bouclier en bois, \dice{2d6} PA.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Pirates}
+	\begin{hangingpar}
+		\textit{Bandits (humains) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 12 (armure de cuir),
+	hitpoints  = \dice{2d8 + 2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	DEX = \stat{12},
+	CON = \stat{12} 
+	]
+	\dndline%
+	\details[%
+	skills= Acrobatie +3,
+	senses= Perception passive 10,
+	languages = bas-thrain,
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, armure de cuir, \dice{2d6} PA.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Hommes de patrouille}
+	\begin{hangingpar}
+		\textit{Bandits (humains) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 14 (armure de cuir et bouclier),
+	hitpoints  = \dice{2d8 + 2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	DEX = \stat{12},
+	CON = \stat{12} 
+	]
+	\dndline%
+	\details[%
+	senses= Perception passive 10,
+	languages = bas-thrain,
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+1} dégâts perforants.
+	\end{monsteraction}
+	\begin{monsteraction}[Arc court]
+		Attaque à distance avec une arme : +3 au toucher, portée 24/96 m, une cible. Touché : \dice{1d6+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, bouclier en bois, arc court, armure de cuir, carquois, 10 flèches, \dice{2d6} PA. Un des hommes porte une lanterne sourde.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Geôlier}
+	\begin{hangingpar}
+		\textit{Malfrat (humains) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 11 (armure de cuir),
+	hitpoints  = \dice{5d8 + 10},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{15},
+	DEX = \stat{11},
+	CON = \stat{14},
+	CHA = \stat{8}
+	]
+	\dndline%
+	\details[%
+	skills= Intimidation +2,
+	senses= Perception passive 10,
+	languages = bas-thrain,
+	challenge= 1/2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Attaques multiples]
+		Le Geôlier réalise deux attaques au corps à corps.
+	\end{monsteraction}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+2} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, armure de cuir, \dice{2d6} PA, clefs.
+	\end{monsteraction}
+\end{monsterbox}
+
+\end{multicols}
+
+\chapter{La Maison Abertus}
+
+\begin{multicols}{2}
+
+\section{L’auberge}
+\subsection{Loison}
+La ville de Loison est une des Villes-Libre des Vingt Royaumes. Cette ville une localité importante et prospère située sur un fleuve qui traverse une
+grande partie des Royaumes. Le grand marché de la ville est approvisionné par les nombreux villages aux alentours. Elle vit surtout du commerce entre
+les Royaumes, et les habitants y vivent en sécurité : les hommes portant des armes visibles y sont très rares et les gardes les tiennent à l’œil. Son
+statut de Ville-Libre la place en dehors de la juridiction directe d’un Royaume, elle est de ce fait indépendante. Le gouvernement de cette cité-état
+est dirigé par une Aristocratie en apparence, mais c’est en fait le grand conseil des marchands qui tire les ficelles.
+
+\begin{paperbox}{ }
+	Vous arrivez en fin d’après-midi au bout de la grande route qui mène à la Ville-Libre de Loison. Depuis plusieurs kilomètres, la route était de plus 
+	en plus fréquentée, surtout par des paysans. La ville elle-même est entourée d’une ancienne muraille, et une seule ouverture est visible : la porte
+	au bout de la grande route.\par\noindent Des gardes sont à la porte, et surveillent les gens qui entrent dans la ville. Un des voyageurs, en avant des
+	\PJs, est interpellé : un des gardes lui explique qu’il ne doit pas faire usage de ses armes en ville et qu’il vaut mieux pour tout le monde
+	qu’il les laisse à l’auberge. Vous voyez le garde attacher les armes du voyageur malgré ses protestations.\par\noindent Les \PJs se retrouvent tous
+	ensemble devant les gardes, qui leurs donnent le même conseil, avant d’attacher leurs armes, également. Le chef des gardes leur pose des questions
+	sur les raisons de leur venue en ville, avant de leur expliquer qu’il connaît une auberge bon marché, le \emph{Repos du Voyageur} qui leur conviendra
+	tout à fait.
+\end{paperbox}
+
+\subsection{Le Repos du Voyageur}
+Les \PJs viennent donc d’arriver à Loison, la plus grande ville des environs. Ils sont venus ici pour différentes raisons, surtout attiré par le grand
+marché des moissons qui va débuter dans quelques jours, et ils comptent bien réussir leur vie. Ils utilisent leurs maigres finances pour se loger dans
+une auberge, « Le repos du voyageur », tenue par un ancien soldat, Bertord – l’Oban de la mission précédente. Les \PJs vétérans de la campagne contre
+les pirates s’y retrouvent, et font connaissance avec les autres \PJs.\par L’auberge est accueillante, bon marché et de nombreux citoyens y passent la
+soirée. La chambre commune est à 5 pièces d’argent (PA), le repas copieux à 15 pièces de cuivre (PC), la chope de bière à 4 PC. Bertord, l’aubergiste
+est bavard, et les \PJs peuvent apprendre quelques rumeurs.
+
+\begin{quotebox}
+	Renseignements (Charisme, 4 PA)\par\noindent
+	\begin{tabular}{lp{0.7\linewidth}}
+		DD 12 & Un meurtre a été perpétré dans le bas quartier : une fille de joie a été découverte égorgée.\\
+		DD 15 & Certains disent que la Fraternité du Sang est responsable du meurtre de la fille de joie.\\
+		DD 15 & Le célèbre navigateur Capitaine Cordell serait rentré de son expédition dans l’océan de l’ouest et aurait découvert une nouvelle terre.\\
+		DD 18 & L’empire des Îles, au-delà de la mer à l’est, a stoppé ses relations commerciales avec les Vingt Royaumes.
+	\end{tabular}
+\end{quotebox}
+
+Totalement absorbés par les conversations ou par la spécialité de l’auberge, les pommes de terres aux épices, les \PJs ne font peut-être pas
+attention à la personne qui vient d’entrer dans l’auberge, s’assoit au comptoir, parle a l’aubergiste quelques instants. Ce dernier désigne la table
+des \PJs, et le nouveau venu les observe, ouvrant grand ses oreilles. Faire aux \PJs un jet de Perception (DD 15). S’il est réussi, le \PJ remarque
+qu’il est observé avec attention. S’il est réussi de plus de 5 points, le \PJ a remarqué le manège de l’aubergiste. S’il  est critique, il a vu toute
+la scène. En cas de réussite, le \PJ a droit à un 2\textsuperscript{eme} jet de Perception avec un désavantage en opposition avec un jet de Dextérité
+(Discrétion) d’Ivano, pour remarquer qu’un autre homme est rentré peu après et semblait le suivre (il s’agit d’Ivano).
+
+\subsection{Recrutement}
+Au bout d’un moment, le nouveau venu se décide : il prend un pichet, et s’avance vers la table des \PJs : « Puis-je m’asseoir ? C’est ma
+tournée ! ». Il commande une tournée de bière à l’aubergiste. L’homme a l’air d’un bourgeois d’environ 60 ans ; ses vêtements quoique élégants sont
+usés par les années ; une bourse ainsi qu’une épée courte sont accrochées à sa ceinture. Mais ses yeux brillent d’intelligence. C’est le seul client
+de l’auberge qui porte ostensiblement une arme, et personne ne semble y faire attention.\par\emph{- Je me présente : je suis le Marchand Abertus. Mais
+tout d’abord, levons nos verres à votre arrivée ici, à Loison.}\par Ensuite, il leur demande comment ils trouvent la ville, ses habitants, et il se
+renseigne sur leurs affaires, et il est très intéressé si les \PJs lui parlent de la campagne maritime\ldots Au bout d’un moment (et d’une
+autre tournée de bière), il se décide à dire ce qui l’intéresse :
+
+\begin{paperbox}{ }
+	Ecoutez, messieurs ! Je prépare une petite expédition dans un lieu peu fréquenté, Mais je préfère ne pas y aller seul : un accident est si vite
+	arrivé. C’est pourquoi je cherche des jeunes gens en bonne condition physique, n’ayant pas froid aux yeux et capable de se défendre. Non pas que je
+	craigne une attaque, mais nous pouvons toujours tomber sur une bête sauvage. Quant aux brigands, je suis sûr que la vue d’une demi-douzaine de
+	personnes bien armées les fera réfléchir. Pour l’expédition, j’aimerais mieux en parler autre part. Si ma proposition vous intéresse, soyez demain à
+	16 heures au début de la rue du Régent. Ensuite, frappez à la porte portant ce dessin.
+\end{paperbox}
+
+Et il montre un blason représentant un Lion gisant sur du sable.\par Sur un jet de Perception (DD 15), un personnage peut remarquer que le blason que
+leur a montré Abertus se retrouve en motif dans ses vêtements.\par Il fait un geste à l’aubergiste en se levant, et s’en va. L’aubergiste, lui, vient
+à leur table et leur demande s’ils désirent quelque chose, le monsieur ayant déjà payé.\par Ils peuvent ainsi prendre un copieux souper, avant de
+passer une bonne nuit pleine de rêves d’aventures extraordinaires. Le lendemain, ils ont largement le temps de visiter une partie de la ville, de
+questionner l’aubergiste au sujet du bourgeois de la veille, de faire des achats,\ldots Mais l’heure tourne, et bientôt il est temps de se rendre au
+rendez-vous.\par L’aubergiste pourra leur apprendre que Mr Abertus est un des notables de la ville, et qu’il est marchand, et qu’il fait partie du
+Conseil de la ville.
+
+\section{La maison d’Abertus}
+\subsection{Dans les rues}
+Les \PJs ne pourront pas se promener avec des armes et armures apparentes : en effet, ils se feront accoster par les gardes qui leur demande
+fermement de laisser leurs « affaires » à l’auberge pour ne pas nuire à la tranquillité des citoyens, et dans le cas contraire ils serait de leur
+devoir de les raccompagner aux portes de la ville. Les \PJs peuvent tout de même conserver une épée courte, ce qui est toléré par la garde\par
+Ils peuvent questionner l’aubergiste ou les passants, qui leurs indiqueront où se situe les rues du Lion et du Régent, dans le beau quartier de la
+ville.
+\subsection{Étrange réception}
+Les \PJs trouvent sans difficultés la fameuse porte. Cela a tout l’air d’une porte latérale d’une grande demeure dont se servent les
+domestiques. Après avoir frappé a la porte, il leur faut attendre quelque temps avant qu’un serviteur daigne leur ouvrir la porte : \emph{« Que
+désirez-vous ? Nous souhaiterions voir monsieur Abertus, pour affaires »}. Le serviteur semble quelque peu gêné, mais il fait entrer les \PJs.
+La maison semble celle d’un riche bourgeois, les murs sont recouverts de teintures et de tapisseries, le sol est recouvert de tapis, et la demeure est
+vaste. Le serviteur les fait entrer dans un petit cabinet, et leur dit de bien vouloir patienter quelques instants.\par Enfin un homme entre dans la
+pièce. Il est jeune, environ 25 ans, et est vêtu comme un riche bourgeois (pourpoint de velours, portant comme motif un lion gisant, bottes cirées,
+\ldots)\par \emph{- Je suis Farant Abertus, le Marchand. Quelles sont ces affaires dont m’a parlé mon domestique ?}\par Il ne s’agit pas de la bonne
+personne ! Mais après avoir expliqué leur histoire, les \PJs apprennent la triste nouvelle : \emph{« Mon père est mort cette nuit, et c’est
+malheureusement avec lui que vous aviez affaire. Mais je ne peux rien faire pour vous. Si vous permettez, un événement beaucoup plus important me
+préoccupe pour le moment. »}. Et il s’en va.\par Alors que le domestique les raccompagne à la porte latérale, une servante demande à l’un des
+\PJs (de préférence celui avec le Charisme le plus élevé) : \emph{« Ma maîtresse souhaiterait vous parler, mais pas maintenant. Pourrais-je lui
+dire où vous trouver ? À l’auberge du Repos du Voyageur »}.
+\section{Retour au point de départ}
+\subsection{Que faire ?}
+Voilà nos \PJs sans travail. Ils peuvent encore espérer une entrevue avec la maîtresse de la servante, mais rien n’est moins sûr. Ils peuvent
+continuer la visite de la ville, ou faire toute autre activité. Enfin, ils peuvent rester à l’auberge, mais ce n’est pas de cette façon qu’ils peuvent
+faire fortune.\par Ils peuvent s’intéresser au le meurtre de la fille de joie. En posant de bonnes questions, ils peuvent découvrir que ce n’est pas
+la première à disparaître ainsi, mais les circonstances sont troublantes. En effet, elle a été égorgée, mais cela s’est passé dans une ruelle
+fréquentée et personne n’en a été témoin, et il ne s’agirait pas d’une rivalité entre souteneurs.
+\subsection{Embûche}
+Toujours est-il que si certains d’entre eux se promènent après la tombée de la nuit dans le quartier de l’auberge, ils risquent fort de rencontrer une
+douzaine de voyous, certains armés de gourdins. L’un d’entre eux leur dit : \emph{« Il vaut mieux pour votre santé ne pas rester dans cette ville. Écoutez
+mon conseil et allez-vous-en ! »}. Ensuite, ils s’avancent, menaçants. Si jamais plusieurs des \PJs montrent qu’ils sont du genre courageux et
+se préparent à se battre, l’homme renouvelle son conseil. Sinon, s’ils montrent aucun comportement belliqueux, les voyous essayeront de les passer à
+tabac (ils frappent pour assommer). Evidemment, les \PJs ne se baladent pas en ville avec tout leur attirail car cela n’est pas discret. Les brutes
+(1 par \PJ) attaquent donc les \PJs, pendant que les voyous (1 pour 2 \PJs) restent en arrière. Ces derniers interviennent sur les \PJs qui leur
+apparaîtront les plus coriaces, en les prenant en tenaille au besoin, et en frappant pour assommer. Si la moitié des brutes se trouve hors de combat,
+ils s’enfuient. Si un \PJ magicien utilise un sort voyant, ils s’enfuient également.
+\subsection{La missive}
+Espérons pour eux que la nuit sera tranquille. Car, à leur réveil, l’aubergiste leur fait part d’une missive apportée par une femme de bon matin. Sur
+cette missive, voici ce qu’ils peuvent lire :
+\begin{quotebox}
+	Messieurs,\par\medskip
+	Ma maîtresse souhaite vous rencontrer ce jour en fin d’après-midi à l’auberge des Trois Rois afin de discuter de la proposition que vous avez eu voici
+	2 jours par le très regretté maître Albertus.\par\medskip
+	\emph{Blanche}
+\end{quotebox}
+\subsection{Embauche}
+À l’auberge des Trois Rois, après avoir demandé Blanche, les \PJs sont conduits dans une petite salle servant sans doute aux personnes voulant un peu
+d’intimité. Deux personnes s’y trouvent déjà : deux femmes. La première est la servante qu’ils ont vue dans la maison Abertus, mais habillée bien
+mieux qu’une simple servante. À côté d’elle, une jeune femme drapée dans de superbes habits. C’est cette dernière qui s’adresse aux \PJs.\par 
+\begin{paperbox}{ }
+- Je me nomme Aurore Abertus, et voici Blanche. C’est elle qui vous a apporté mon message à votre auberge. Si je vous ai demandé
+de venir aujourd’hui, c’est pour savoir pourquoi mon père vous avait engagé.\par\noindent - Mon frère Farant n’a rien voulu me dire, et il souhaite
+que je ne m’occupe en rien des affaires de mon regretté père. Vous avez sans doute remarqué que je dispose tout de même de quelques ressources.
+\end{paperbox}
+Cette dernière phrase semble à double sens : une invite à parler pour obtenir une récompense, mais aussi une menace voilée. Les \PJs comprendront vite
+où se trouve leur intérêt. Aurore semble très intéressée par le récit des \PJs, surtout s’ils parlent de la mésaventure de la nuit. Et, avant de les
+quitter, elle les remercie, mais ajoute qu’elle pourrait bien avoir du travail pour eux.
+\section{lieu du crime}
+\subsection{Les indices}
+Aurore demande aux \PJs de la suivre jusqu’à sa demeure. En effet, elle s’interroge sur la raison de la mort de son père. Après être entré par la
+porte de service, elle les mène à la chambre de son père.\par La chambre est grande, bien éclairée par deux fenêtres donnant sur la cour intérieure. Elle se
+trouve au premier étage de la demeure. Elle est richement meublée, avec un grand lit à baldaquins, une commode, une armoire, et une grande cheminée, à
+droite en entrant. Des tapisseries sont accrochées aux murs, et un tapis est étendu au sol. Deux portes, une donnant sur le couloir par lequel les
+personnages sont entrés, l’autre, à droite, donnant sur une autre pièce faisant office de bureau. Les fenêtres font face à la porte du couloir.\par
+C’est dans cette chambre que son père a été retrouvé mort. Mais les \PJs peuvent également regarder le bureau, à côté.\par Le bureau est plus petit,
+avec une seule fenêtre donnant sur la cour. Le plancher au sol est nu, mais les murs sont aussi recouverts de tapisserie. La porte donnant sur la
+chambre est en fait une porte dérobée, une autre porte donnant dans le couloir. Le mobilier est constitué d’un bureau avec un fauteuil, de plusieurs
+chaises, d’un coffre, d’une grande bibliothèque occupant le mur opposé à la porte dérobée, et d’une cheminée.\par Aurore explique que son père a été
+retrouvé mort dans son lit par le valet de chambre. Il était en tenue de nuit. La mort semble naturelle, mais des traces sur son cou lui font
+suspecter qu’il a été étranglé. Le cadavre n’est plus là, bien entendu.\par Les \PJs peuvent inspecter la chambre, mais un jet d’Intelligence
+(Investigation) ne montrera rien de particulier. Par contre, les \PJs peuvent demander d’inspecter le bureau.
+\begin{quotebox}
+	Ce que les \PJs peuvent trouver en fouillant - jet d’Intelligence (Investigation) :\par\noindent
+	\begin{tabular}{lp{0.7\linewidth}}
+		DD 12 & En examinant la bibliothèque, les \PJs peuvent remarquer une tâche de vin fraîche au pied de celle-ci, au plus près du bureau. (\XP{25})\\
+		DD 15 & Sur la fenêtre, des traces d’effractions : quelqu’un a introduit une fine lame pour ouvrir la fenêtre. (\XP{50})\\
+		DD 18 & Sur le bureau, un compartiment secret, contenant deux rouleaux de parchemin (\XP{75}). Le mécanisme d’ouverture est piégé par une aiguille,
+		mais heureusement elle n’est pas enduite de poison. Si les \PJs ne le trouvent pas tout seul, Aurore se souvient de l’existence du compartiment
+		secret. Les \PJs peuvent alors faire 20 pour le trouver, mais cela ne donne pas d’expérience.
+	\end{tabular}
+\end{quotebox}
+En demandant à Aurore, celle-ci indique que son père avait l’habitude de boire un verre de vin avant de s’endormir. Ce dernier était vide au matin,
+mais la tâche n’y était pas la veille, ce que confirme le valet de chambre.
+\subsection{La carte}
+Le premier rouleau de parchemin, une fois déplié, se montre en fait être une ancienne carte, sur laquelle est dessinée un chemin passant entre forêts,
+montagnes,\ldots La légende de la carte n’est pas écrite en langue commune et alphabet commun, mais dans une langue et un alphabet qui semble inconnu.
+Le sort Compréhension des langues ne fonctionne pas dessus, comme si le parchemin était protégé par le sort Page secrète.\par Le deuxième rouleau est
+une liste détaillant l’équipement et les provisions nécessaires à un voyage de plusieurs semaines dans une région sauvage. La quantité d’équipement
+est prévue pour un groupe d’une demi-douzaine de personnes.\par Aurore ne peut donner aucune information sur la carte. Elle savait que son père
+préparait un voyage, mais elle n’avait pas pu découvrir sa destination. Elle préfère conserver la carte.
+\section{Investigations}
+\subsection{Trouver un passe-temps}
+S’ils attendent quelques jours dans leur auberge, les \PJs auront un autre rendez-vous, le surlendemain, toujours au même endroit. En attendant, les
+\PJs vont certainement s’ennuyer, car ils ne connaissent personne et n’ont rien à faire. Mais les gens parlent beaucoup du prochain grand marché qui
+va avoir lieu, à l’occasion de la fin des récoltes. À cette occasion, la ville voit sa population doubler, et les \PJs pourraient peut-être y trouver
+de bonnes opportunités. Toujours est-il qu’ils ne seront plus pris à partie par des brigands. Ils auront même l’occasion de gagner quelques sous en
+aidant à l’édification de tentes et de chapiteaux, pour ce marché. Cela leur permet surtout d’en apprendre plus sur la ville et son fonctionnement, et
+de gagner 2 PA par jour. Sinon, ils peuvent toujours exercer une profession, s’ils en ont la compétence.\par Les renseignements obtenus sont de
+l’ordre des commérages, en général, mais ils peuvent en apprendre plus sur la ville. En effet, Loison est dirigée par les familles des plus riches
+marchands. Il y a 20 sièges (le chiffre 20 est toujours utilisé dans les institutions). La famille Abertus est l’une d’elles, même si son prestige
+était au plus bas à cause de mauvaises affaires, et cela avant bien avant le décès du chef de famille. Il se raconte que le fils, Farant, n’a pas
+l’étoffe du père et qu’Aurore serait bien plus capable de diriger les affaires familiales.\par Pendant toute la durée du grand marché aux moissons,
+les patrouilles de gardes sont fréquentes, pour assurer le calme. Les voyageurs ostensiblement armés sont priés de laisser leurs armes à leurs
+auberges, et s’y font raccompagner le cas échéant.
+\subsection{Un nouveau rendez-vous}
+Aurore Abertus leur fait parvenir une invitation pour la rejoindre à l’auberge des Trois Rois. Elle les accueille avec froideur, et Blanche n’est pas
+là. Après leur avoir souhaité le bonjour, elle leur annonce qu’elle a fait une découverte à propos de leur affaire, mais elle préfère ne pas en parler
+dans cette auberge. Aussi, elle leur demande de la suivre dans un endroit sûr où ils pourront parler sans inquiétude.\par Elle les conduit dans un
+quartier de la ville assez pauvre. Le trajet prend une dizaine de minute, d’autant plus qu’Aurore n’a pas pris le chemin le plus direct, ce dont un
+\PJ peut se rendre compte avec un jet de Sagesse (Survie) DD 15. Si un \PJ fait attention aux gens, il peut faire un jet de Perception pour remarquer
+que quelqu’un les suit, en opposition avec un jet de Dextérité (Discrétion) de Viktor.\par Ils arrivent enfin devant une porte fermée. Aurore frappe
+deux coups, le judas s’ouvre, puis ensuite la  porte. Ils entrent dans un hall avec deux portes latérales et un escalier. La personne qui leur a
+ouvert la porte est Blanche. Aurore leur annonce qu’ils pourront parler au premier, et monte les escaliers, les invitant à la suivre. L’escalier donne
+sur un palier avec trois portes, et Aurore ouvre celle de gauche. La décoration du hall et de l’escalier laisse à désirer.\par Si un des \PJs
+s’attarde, il entendra deux coups à la porte d’entrée. Sinon, Les \PJs pourront faire un jet de Perception (DD 15). Ils entendront les coups en cas de
+réussite. Si un \PJ revient en arrière pour voir ce qu’il en est, il verra Blanche ouvrir la porte à un homme. Celui-ci affirmera : \emph{« ils n’ont
+pas été suivis, j’en suis sûr »}.
+\begin{paperbox}{ }
+	Vous entrez dans une pièce meublée comme un petit salon, avec deux divans, trois fauteuils, une table basse. Une cheminée se trouve dans un coin,
+	les murs sont recouverts de tapisserie et deux fenêtres donnent une lumière suffisante à cette heure de la journée. Sur la table basse, une carafe de
+	vin et une demi-douzaine de verre attendent. 
+\end{paperbox}
+Aurore les invite à s’asseoir, et choisit quant à elle le fauteuil le plus confortable, entre les deux fenêtres.\par Le temps de prendre place,
+Blanche entre également dans la pièce. Elle se dirige à coté de sa maîtresse et lui dit quelques  mots à l’oreille. Ensuite, elle se déplace jusqu’à
+la table et commence à remplir les verres, qu’elle sert aux \PJs, puis à Aurore et, enfin, s’assoit aux pieds de sa maîtresse.
+\begin{paperbox}{ }
+	- Si je prends autant de précautions pour vous parler, c’est parce que j’ai découvert ce qui est arrivé à mon père. Du moins, je le pense. En effet,
+	il y a environ un mois de cela, mon père est entré en contact avec le marchand Cedral, qu’il avait connu plus jeune. Il avait besoin de quelques
+	hommes sûrs, n’ayant pas froid aux yeux, pour l’accompagner jusqu’à un certain endroit à plusieurs jours de voyage d’ici. Cedral lui dit que ses
+	hommes seraient disponible juste après les fêtes de la moisson. Mon père avait déjà commencé ses préparatifs de voyage lorsque Cedral, apparemment,
+	lui annonça que ce n’était plus possible. C’était il y a une semaine .Alors mon père, qui ne voulait pas laisser tomber, s’est mis dans la tête de
+	trouver lui-même des hommes et il a fini par tomber sur vous. Malheureusement, il a été assassiné, et Cedral y est peut-être pour quelque
+	chose.\par\noindent - J’ai fait des recherches sur Cedral. C’est un marchand peu scrupuleux et qui est suspecté de faire de la contrebande. Je pense
+	qu’il voulait se séparer de mon père pour partir à sa place. En effet, mon père possédait un parchemin et il nous disait tout le temps que grâce à ce
+	parchemin, il deviendrait très riche un jour. Il doit s’agir de la carte que nous avons trouvée dans son secrétaire. Je suppose que l’assassin était
+	venu chercher ce parchemin, mais il est tombé sur mon père, et l’a étranglé. Heureusement, il n’a pas pu avoir la carte. En fait, je l’ai mis en lieu
+	sûr, pour le moment. Car je n’ai pas compris ce qu’il y a dessus. Mais j’envisage tout de même de le découvrir.\par\noindent - Je pense que Cedral
+	doit en savoir plus que moi sur ce parchemin. Je souhaiterais donc le rencontrer, afin de mettre les comptes à jour. C’est pour cela que j’ai besoin
+	de vous. Etant donné qu’il a bon nombre d’appuis ici, je ne peux faire confiance qu’en peu de gens, et vous êtes les seuls à pouvoir me servir
+	d’hommes de main en cas de problème car vous n’êtes pas de la ville.
+\end{paperbox}
+Pour les \PJs, il s’agit maintenant de préparer la rencontre avec le marchand. Malheureusement, il possède plusieurs bâtiments, ce qui n’arrange pas
+les affaires de nos \PJs. Le premier est un hôtel particulier dans lequel il vit et reçoit ses connaissances. Les deux autres font office d’entrepôts
+près des docks.
+\section{La rencontre}
+\subsection{Repérages}
+Il apparaît rapidement aux \PJs que si Cedral veut tenter quelque chose, il ne le fera pas dans son hôtel particulier. Pour les entrepôts, après
+enquête (Renseignement, DD 13), ils découvrent que l’un des deux, plutôt grand, n’est pas utilisé que par le marchand, tandis que l’autre, plus petit
+est situé à une des extrémités des docks.\par L’entrepôt le plus vaste est en réalité le futur lieu de l’entrevue. En effet, Cedral s’est associé avec
+deux autres marchands peu scrupuleux, secrètement, afin de faire de la contrebande. Lorsqu’un des marchands est suspecté, il lui suffit de déplacer la
+marchandise d’un coin à un autre de l’entrepôt, et comme cela, il n’a pas de problème.\par Si les \PJs surveillent un peu les deux entrepôts, voici
+ce qu’ils peuvent observer :
+\begin{quotebox}
+	Test de Perception :\par\noindent
+	\begin{tabular}{lp{0.7\linewidth}}
+		DD 10 & Le plus grand est celui ayant l’activité la plus intense\\
+		DD 15 & Les hommes travaillant dans le grand entrepôt sont armés de gourdins\\
+		DD 20 & Il y a également des hommes portant des armures de cuir et des dagues.
+	\end{tabular}
+\end{quotebox}
+Il n’est pas difficile d’observer les entrepôts sans se faire remarquer : Passer inaperçu nécessite un jet de Dextérité (Discrétion) DD 12 ; et la
+difficulté diminue à 8 si le \PJ se déguise un peu.\par Il y a trois moyens d’accès à l’entrepôt : deux portes cochères situées de part et
+d’autre du bâtiment, et une troisième porte, plus petite, ne servant qu’au personnel.\par L’intérieur du bâtiment est plutôt encombré : ballots, caisses
+s’entassent sans ordre apparent. Un des coins est fermé par deux pans de murs en bois, afin de former une petite pièce dans laquelle se trouve une
+table, quatre chaises et une commode remplie de bouteilles de vin.\par L’entrepôt est constamment gardé par deux hommes, Hans et Joachim, qui se
+relaient tout au long de la journée. De plus, pendant la journée, il y a une dizaine de manœuvriers travaillant à l’intérieur de l’entrepôt. Un
+personnage peut essayer de se faire passer pour un manœuvrier pour entrer dans l’entrepôt et en avoir un aperçu. Il semble très facile à une ou deux
+personne de se cacher à l’intérieur, en profitant de l’agitation générale, mais un groupe plus important se ferait certainement remarquer.
+\subsection{Le rendez-vous}
+Aurore prévient les \PJs qu’elle ne souhaite pas voir le sang couler, et qu’elle ne veut pas que la garde intervienne, il faut donc rester discret et
+éviter une bataille rangée.\par Cedral a prévu une demi-douzaine d’hommes de main pour la rencontre : Ivano, accompagné de Hans, Joachim et 4 autres
+brutes. Il pense que ces hommes serviront à l’intimidation plutôt qu’à une confrontation, car il préfère utiliser des méthodes plus discrètes comme
+celle qu’il a utilisée avec Abertus père. Il suppose qu’Aurore ne sera accompagnée que d’un ou deux serviteurs, et il compte lui demander de lui
+donner le parchemin sans conditions. Les hommes de main ne devraient servir qu’à ajouter du poids à ses exigences. En cas de problème, Cedral n’est
+pas du genre à rester pour un affrontement direct. Il ne se battra pas, et s’il est attaqué, tentera de fuir.\par Si les choses tournent mal, il a
+prévu une porte de sortie (la petite porte) et s’enfuit, protégé par son homme à tout faire, Ivano. Les deux hommes attendent l’entrevue non loin de
+cette petite porte, qui n’est pas très visible. Les hommes de main sont répartis dans tout l’entrepôt, et ils ont ordre de retenir tout individu
+dangereux. Cependant, ils ne sont pas fanatiques et déposeront les armes dès que deux d’entre eux auront été mis hors de combat. Ce sont des gros
+bras, mais des piètres escrimeurs et ils tiennent à la vie. Par contre, Ivano est bien plus dangereux. Il est prêt à tenir tête à deux individus à la
+fois (ou trois s’ils lui apparaissent mauvais) et ne baissera les bras qu’à la dernière extrémité.\par Si Cedral arrive à s’enfuir, il se dirige vers
+son hôtel particulier et s’y enferme. Il cherchera ensuite à négocier pour éviter de se faire accuser du meurtre d’Abertus père.\par Dans le cas où
+Cedral se fait encercler par les \PJs, il n’a aucune velléité belliqueuse. Il essaie de marchander sa liberté, arguant au besoin que la mort d’Abertus
+n’est pas de sa faute, mais d’un excès de zèle de la part d’Ivano, qui ne cherche même pas à démentir. Toujours est-il que Cedral doit s’en tirer,
+même s’il faut pour cela faire intervenir une patrouille de gardes qui ont plutôt tendance à frapper d’abord et interroger ensuite.
+\section{Epilogue}
+Si les \PJs arrivent à se saisir de Cedral, ce dernier crachera le morceau rapidement. Sinon, il leur faudra partir à sa poursuite dans les ruelles de
+la ville. Heureusement, le marchand n’est plus tout jeune et s’essouffle vite.\par Cedral dénoncera Ivano comme seul responsable de la mort d’Abertus,
+et sera prêt à renseigner les \PJs sur le parchemin en échange de sa tranquillité (en cas de problèmes, une patrouille de garde calmera tout cela).
+Le marchand apprend donc au groupe que le parchemin est en fait une carte représentant une ancienne forêt, et est censée conduire aux ruines d’une
+cité disparue. Le problème étant que le lieu est inhabité, voire même mal fréquenté, et que personne n’y va plus depuis bien longtemps. Aurore sera
+d’autant plus satisfaite d’avoir les informations si les \PJs n’ont pas eu besoin de se battre. Elle récompensera les \PJs en les équipant s’ils le
+souhaitent (armes de bonnes qualités, matériels spéciaux, possibilité d’utiliser certains services…) pour 200 PO par \PJ, jusqu’à 250 PO s’ils ne se
+sont pas battus. Les \PJs reçoivent également \XP{100}.
+À la fin, Aurore invite les \PJs à rester dans la ville jusqu’à la fin de la fête des moissons, au cas où elle aurait un autre travail à leur
+proposer.
+
+\pagebreak
+\section{Les PNJs}
+
+\begin{monsterbox}{Brutes}
+	\begin{hangingpar}
+		\textit{Hommes de main (humain) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 11 (armure de cuir),
+	hitpoints  = \dice{2d8+2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{12},
+	CON = \stat{12}
+	]
+	\dndline%
+	\details[%
+	senses= Perception passive 10,
+	languages = {bas-thrain, vethrain},
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Gourdin]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+1} dégâts contondants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Gourdin, armure de cuir.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Voyous}
+	\begin{hangingpar}
+		\textit{Hommes de main (humain) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 11 (armure de cuir),
+	hitpoints  = \dice{2d8+2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{12},
+	CON = \stat{12}
+	]
+	\dndline%
+	\details[%
+	senses= Perception passive 10,
+	languages = {bas-thrain, vethrain},
+	challenge= 1/4
+	]
+	\dndline%
+	\begin{monsteraction}[Attaque sournoise (1/tour)]
+		Un voyou inflige \dice{1d6} dégâts supplémentaires quand il touche une cible lors d’une attaque avec une arme et qu’il a l’avantage au jet
+		d’attaque, ou lorsque la cible est 1,50 mètre ou moins d’un allié du voyou qui n’est pas incapable d’agir et si le voyou n’a pas un désavantage à
+		son jet d’attaque.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Dague]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Dague, armure de cuir.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Aurore Albertus}
+	\begin{hangingpar}
+		\textit{Marchande (humaine) de taille M, neutre bon}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 11,
+	hitpoints  = \dice{4d8 + 4},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	DEX = \stat{12},
+	CON = \stat{12},
+	INT = \stat{14},
+	CHA = \stat{16} 
+	]
+	\dndline%
+	\details[%
+	skills={Histoire +4, Religion +4, Perception +2, Perspicacité +2, Persuasion +5},
+	senses= Perception passive 12,
+	languages = {bas-thrain, vethrain, haut-thrain, elvish},
+	challenge= 1/4
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Dague]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Dague de maître, vêtements de très bonne qualité, \dice{5d6} PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Blanche}
+	\begin{hangingpar}
+		\textit{Servante (humaine) de taille M, neutre}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 10,
+	hitpoints  = \dice{2d8},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{8},
+	WIS = \stat{12} 
+	]
+	\dndline%
+	\details[%
+	skills=Perception +3,
+	senses= Perception passive 13,
+	languages = {bas-thrain, vethrain},
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Dague]
+		Attaque au corps à corps avec une arme : +2 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Dague, vêtements simples de bonne qualité, \dice{2d6} PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Viktor}
+	\begin{hangingpar}
+		\textit{Rodeur (humain) de taille M, neutre}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 13 (armure de cuir),
+	hitpoints  = \dice{4d8 + 4},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{12},
+	DEX = \stat{14},
+	CON = \stat{12},
+	WIS = \stat{12} 
+	]
+	\dndline%
+	\details[%
+	skills={Athlétisme +3, Discrétion +4, Nature +2, Médecine +3, Perception +3, Survie +3},
+	senses= Perception passive 13,
+	languages = {bas-thrain, vethrain},
+	challenge= 1/2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Attaque à deux armes]
+		Viktor peut effectuer une attaque avec son épée courte dans la main droite et sa dague dans la main gauche
+	\end{monsteraction}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +5 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+2} dégâts perforants.
+	\end{monsteraction}
+	\begin{monsteraction}[Dague]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+2} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte de maître, dague, armure de cuir, vêtements robustes de bonne qualité, \dice{2d6} PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Cedral}
+	\begin{hangingpar}
+		\textit{Marchand (humain) de taille M, neutre}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 11,
+	hitpoints  = \dice{4d8},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	DEX = \stat{12},
+	INT = \stat{14},
+	WIS = \stat{14} 
+	]
+	\dndline%
+	\details[%
+	skills={Histoire +4, Perspicacité +4, Persuasion +2},
+	senses= Perception passive 12,
+	languages = {bas-thrain, vethrain, nothrain, haut-thrain},
+	challenge= 1/4
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Dague]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Dague de maître, vêtements bourgeois, \dice{2d6 + 40} PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Ivano}
+	\begin{hangingpar}
+		\textit{Mercenaire (humain) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = {14 (armure de cuir cloutée, cape de protection)},
+	hitpoints  = \dice{5d8 + 10},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{16},
+	DEX = \stat{12},
+	CON = \stat{14}
+	]
+	\dndline%
+	\details[%
+	skills={Athlétisme +5, Intimidation +2},
+	senses= Perception passive 12,
+	languages = {bas-thrain, nothrain},
+	challenge= 1/2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +6 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+3} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte de maître, dague, armure de cuir cloutée, cape de protection +1, potion de soins, \dice{3d6} PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Hans et Joachim}
+	\begin{hangingpar}
+		\textit{Hommes de main (humain) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 11 (armure de cuir),
+	hitpoints  = \dice{2d8+2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{12},
+	CON = \stat{12}
+	]
+	\dndline%
+	\details[%
+	senses= Perception passive 10,
+	languages = {bas-thrain, vethrain},
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Gourdin]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+1} dégâts contondants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Gourdin, dague, armure de cuir, \dice{3d6} PA.
+	\end{monsteraction}
+\end{monsterbox}
+
+\end{multicols}
+
+\chapter{Loison}
+
+\begin{multicols}{2}
+
+\section{La Ville-Libre de Loison}
+Il y a environ 11500 habitants dans la ville. Le pouvoir dans la cité est détenu en partie par le Bourgmestre, mais également par le conseil des 20
+familles de marchands.\par C’est une ville prospère, et qui profite de son statut de ville libre - c’est à dire indépendante d’un royaume - pour
+commercer avec un minimum de taxes. Il est possible d’y trouver a peu prés tout bien en vente libre à un prix raisonnable (le prix indiqué pour
+l’équipement) sauf bien entedu pour les armes : les armes des guerre, à l’exception des épées courtes, ne sont pas disponibles à la vente, sauf
+autorisation spéciale.\par Il y a de nombreuses patrouilles de garde dans la ville, et il faut compter \dice{1d6 + 3} minutes pour qu’une patrouille
+intervienne. Une patrouille est composée de 4 gardes.
+
+\begin{monsterbox}{Garde}
+	\begin{hangingpar}
+		\textit{Garde (humain) de taille M, neutre}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = {16 (cuirasse, bouclier)},
+	hitpoints  = \dice{2d8+2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{13},
+	CON = \stat{12}
+	]
+	\dndline%
+	\details[%
+	senses= Perception passive 10,
+	languages = {bas-thrain, vethrain},
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Lance]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Lance, dague, cuirasse, bouclier.
+	\end{monsteraction}
+\end{monsterbox}
+
+\section{Personnages et lieux remarquables}
+\subsection{L’armurerie de Walar}
+Les \PJs vont sûrement chercher à acheter des armes et armures pour s’équiper. Walar est le marchand d’armes le plus réputé de la ville.\par Il y a
+peu de demandes en ville, car la loi est stricte sur le port d’armes et d’armures en public : il ne faut pas déranger le commerce et faire peur aux
+clients. C’est pour cela que son échoppe est peu visitée.\par En entrant dans le magasin, on peut admirer une superbe cuirasse décorative, qui est
+faite pour l’apparat. Un présentoir d’épées et d’arcs est également visible. Mais cela semble au premier abord de faible qualité.\par Pour obtenir un
+équipement valable, il faut le demander à Walar.\par En ce qui concerne les armes, il dispose de plusieurs exemplaires d’épées courtes, de haches
+d’armes, de morgensterns et d’arcs, en version normale et de maître. Il affirme pouvoir se procurer en deux jours maximum toute arme simple de maître
+désirée, à l’exception des arbalètes. Si les \PJs arrivent à faire passer son attitude à amicale, il proposera également des armes magiques (niveau
+faible uniquement), avec un délai de \dice{1d6+4} jours. Il peut également se procurer des armes en argent alchimique.\par En armure, Walar est peu
+fourni : il dispose actuellement d’une cotte de mailles et d’une cuirasse, toutes deux de maîtres, mais qu’il faut adapter à la taille et à la
+corpulence de l’acheteur (prévoir 1 à 2 jours d’attente). Sinon, il peut proposer des armures d’écailles. Il ne propose également que des boucliers
+en bois.\par Walar est également le fournisseur de la garde de la ville, et il a accès à d’autres fournitures. Mais il ne le dira aux PJ que si ces
+derniers jouissent d’une bonne réputation. À partir de ce moment-là, il proposera des armes qui sont normalement en accès restreint, comme les
+épées longues, et également des boucliers en métal, voire même un clibanion.\par
+Enfin, il possède une ancienne épée longue en adamantium, ainsi que deux haches de lancer faites du même métal.\par Les prix pratiqués sont supérieurs
+de 30 \% aux prix normaux (le triple pour tout ce qui est restreint), avec une marge de négociation, et Walar rachète également les armes et armures
+des PJ en prenant une commission minimale de 10 \%, voire plus en fonction de l’état de l’équipement. IL ne refusera jamais d’acheter une arme en
+métal, même s’il le paie le prix de l’acier.
+\subsection{L’échoppe d’Aglot}
+Une échoppe difficile à trouver est celle d’Aglot, qui est l’apothicaire et alchimiste officiel de la ville.\par Dans son magasin, les \PJs peuvent
+acheter différents objets, comme des fioles d’acide ou des flasques de feu grégeois ou des fioles d’antidotes. Il fabrique lui-même tous ces objets,
+et se réapprovisionne rapidement.\par Il vend également différentes plantes et substances, que les magiciens utilisent comme composantes de sort.
+Enfin, il a également un étal de potions (des potions de sorts profanes) qu’il achète à des magiciens.
+\subsection{Le bazar de Bagor}
+Ce magasin est un véritable bric à brac. Seul le propriétaire, Bagor, est capable d’y retrouver quelque chose.\par  Il propose toutes sortes de biens,
+objets précieux, bijoux, matériels, et même des objets merveilleux (communs ou peu communs).
+\subsection{La maison de Paix}
+C’est une grande bâtisse regroupant les temples d’Esus, Bellone, Selène et Portunis.\par On y trouve la seule bibliothèque de la ville, ainsi qu’un
+dispensaire de soins. Il est possible de payer pour des sorts divins de niveau 1 et 2. Pour des sorts de niveau supérieur, (jusqu’au niveau 5), il
+faut passer une audience avec le Maître et le convaincre.\par  Il y a toujours de nombreux visiteurs, que ce soit pour des prières, des offrandes, des
+soins ou encore pour consulter les ouvrages de la bibliothèque.\par La congrégation est dirigée par Maître Sendorain, un Érudit. Il est secondé par
+Illyo, un prêtre de Portunis et Menara, une prêtresse de Sélène. Il y a d’autres prêtres ainsi que des serviteurs. C’est également là que réside
+Ellys.
+
+\end{multicols}
+
+\chapter{Épidémie}
+
+\begin{multicols}{2}
+
+\section{Évènements}
+Les \PJs se trouvent toujours dans l’auberge « le repos du voyageur », et le marché des moissons vient de s’ouvrir. Il se dit en ville que c’est le
+Grand Erudit lui-même qui va officier à la cérémonie de la moisson, et c’est un grand honneur pour la Ville-Libre.\par La ville est en fête, et des
+jeux populaires sont organisés (épreuve de force par équipe, course d’endurance à pied, et autres réjouissances\ldots). Il n’y a pas de gain véritable
+attribué, mais plutôt des bons repas, et ce genre de choses. Il s’agit surtout d’amuser les habitants.\par Les \PJs ne trouveront pas de travail
+intéressant, car le marché est la grande préoccupation de tous. Mais en écoutant les rumeurs, au soir du deuxième jour de la fête, il semble que 2 ou
+3 personnes dans la ville aient attrapé une mauvaise fièvre, alors que ce n’est pas la saison.\par Dès le 3\textsuperscript{eme} jour, les rumeurs se
+propagent dans la rue, et il se dit que la Maison de Paix est déjà remplie par les malades.\par Le 4\textsuperscript{eme} jour, le maire décide de
+fermer la ville et de déclarer un avis d’épidémie et demande à chacun d’éviter de se déplacer.\par Le 5\textsuperscript{eme} jour, le maire fait appel
+aux volontaires pour faire la chasse aux rats, qui semblent être les les vecteurs de l’épidémie.\par Sans l’aide des \PJs, l’épidémie sera enrayée en
+plusieurs semaines. Dès le 3\textsuperscript{eme} jour, les \PJs ont 3 \% de risque par jour d’attraper la maladie, et ensuite, au bout de 14 jours,
+le risque passe à 1 \%, puis à plus rien au bout de 25 jours de plus.
+
+\section{L’enquête}
+\subsection{Rumeurs}
+Voilà les rumeurs que les \PJs pourront entendre s’ils font des recherches :
+\begin{quotebox}
+	Renseignements (Charisme, 4 PA)\par\noindent
+	\begin{tabular}{lp{0.75\linewidth}}
+		DD 20 & La maladie n’est pas contagieuse (renseignement obtenu sans difficulté (à la Maison de Paix).\\
+		DD 15 & La maladie est la Fièvre des Rats, maladie que l’on attrape lorsqu’on se fait mordre par un gros rat (à la Maison de Paix).
+	\end{tabular}\par\noindent
+	À partir du 5\textsuperscript{eme} jour\par\noindent
+	\begin{tabular}{lp{0.75\linewidth}}
+		DD 12 & Il semble que ce sont les rats qui propagent la maladie, et que c’est pour cela que le maire fait la chasse aux rats.\\
+		DD 19 & Certaines personnes ont raconté avoir vu des nuées de rats la nuit.\\
+		DD 17 & Les Paladins Blancs sont à pied d’œuvre dans la Maison de Paix (faux, il n’y a pas de Paladin Blanc en ville).\\
+		DD 22 & Un Paladin Blanc est descendu dans les égouts (toujours faux, il n’y a pas de Paladin Blanc en ville).\\
+		DD 18 & Personne ne comprend le comportement des rats, c’est la première fois qu’ils s’en prennent aux hommes ainsi.\\
+		DD 12 & La fête des moissons est arrêtée sur ordre du maire.\\
+		DD 16 & Le Conseil des Marchands offre une récompense pour tout élément susceptible d’aider à combattre l’épidémie et de la faire disparaître.
+	\end{tabular}\par\noindent
+	À partir du 7\textsuperscript{eme} jour\par\noindent
+	\begin{tabular}{lp{0.75\linewidth}}
+		DD 15 & Des combattants envoyés dans les égouts se sont fait attaquer par des rats, il y a plusieurs blessés, qui sont de plus tombés malades
+		infectés par les rats.\\
+		DD 20 & Un rat de la taille d’un chien a été trouvé dans les égouts, et il a été difficile de le tuer.\\
+		DD 20 & Le Grand Inquisiteur questionne les blessés (faux, c’est le Capitaine de la Garde qui s’en occupe).
+	\end{tabular}
+\end{quotebox}
+
+\subsection{La maladie}
+En enquêtant dans les environs de la Maison de la Paix, les \PJs pourront parler à Ellys (une des prêtres qui s’occupent des malades). Celle-ci a
+remarqué des toutes petites traces de morsures, sur tous les malades. Cela pourrait correspondre à une morsure de rat. De plus, la maladie est
+mortelle et il y a déjà plus de 10 \% de décès, avec tout de même 25 \% de guérison (au 5\textsuperscript{eme} jour), les chiffres montent à 20 \% de
+décès et 35 \% de guérison au bout de 10 jours.\par En enquêtant sur les lieux où il y a le plus de malades (les principaux foyers), ceux-ci touchent
+tous les quartiers de la ville, mais surtout les  docks.\par En enquêtant sur les premiers malades, les \PJs vont découvrir que soit ils travaillaient
+dans les docks, soit ils habitent dans le quartier. Par recoupements, ils peuvent délimiter une partie du quartier des docks qui semble à l’origine de
+l’épidémie.
+
+\begin{paperbox}{Fièvre des Rats}
+	Infection : par blessure / morsure\par\noindent
+	DD Constitution : 12\par\noindent
+	Incubation : \dice{1d3} jours\par\noindent
+	Dommages : \dice{1d3} DEX, \dice{1d3} CON\par\noindent
+	Fréquence : 1 / jour\par\noindent
+	Guérison : 2 réussites successives
+\end{paperbox}
+
+\section{Les docks}
+\subsection{Patrouille dans les docks}
+Pour les \PJs, les docks semblent être le lieu a partir duquel s’est propagé la maladie, de même que cela semble être le quartier ou se trouve le plus
+de rats. \par Durant la journée, tout est calme dans les docks depuis le début de l’épidémie. La quarantaine décrétée par le maire a fermé le port,
+et aucune péniche ni aucun navire ne quitte plus les quais, de même qu’aucune arrivée n’a eu lieu.
+\subsection{Attaque de rats}
+Le quartier des docks est actuellement surveillé par Gondar et ses hommes. Gondar fait partie de la Confrérie (la guilde des voleurs), et c’est un des
+bras droits du chef de guilde. Gondar recherche Silman, un ancien voleur qui est revenu depuis peu en ville et qui a déserté la guilde. Gondar a été
+chargé par la confrérie des voleurs de le retrouver, car Silman n’a pas respecté leurs règles. Gondar suspecte Silman d’être lié à l’épidémie, mais il
+ne sait pas comment ni pourquoi. Comme Silman a disparu dans les docks, Gondar et ses hommes le recherchent. Seulement, l’épidémie a lourdement frappé
+la guilde des voleurs et ses hommes ne sont plus très valides. Il paye donc les dockers et les mendiants pour lui signaler tout événement inhabituel
+dans les docks.\par Gondar ne cherchera pas à affronter les \PJs sauf s’ils traînent dans le quartier la nuit. Dans ce cas, avec 4 de ses hommes, il
+attend les \PJs pour les « affronter ». Mais des nuées de rats passent à l’attaque (prévoir une nuée par \PJ) avant que les 2 groupes se combattent.
+Les rats disparaîtront aussi rapidement qu’ils sont arrivés, laissant leurs cadavres. Chaque morsure de rat est susceptible de véhiculer la maladie
+(jet de Constitution, DD 12).\par Vers la fin du combat, sur un jet de Perception réussi en opposition à un jet de Dextérité (Discrétion) de Silman,
+sous forme hybride), un \PJ aura l’impression d’avoir vu une forme mi-homme mi-rat surveillant le combat.\par  Une fois les rats partis, Gondar sera
+disposé à parler aux \PJs dans une taverne. Il racontera qu’il recherche Silman, que ce dernier s’est réfugié dans les égouts. Ses informateurs
+auraient vu Silman, ou quelqu’un lui ressemblant, dans les docks et toujours de nuit. Et il y avait toujours des rats non loin. Gondar hésite à aller
+dans les égouts pour traquer Silman, car il a peur de tomber dans un piège à cause du nombre de rats qu’il a vu. Il a également vu plusieurs gros
+rats, de la taille d’un chien. Et plusieurs de ses hommes sont atteints par la maladie. Il proposera aux \PJs de leur fournir des informations sur les
+égouts, et sur un jet de Persuasion réussi (DD 15) Gondar acceptera de les accompagner pour un moment. En tous cas, il conseille aux \PJs de prendre
+des flasques d’huile pour les jeter sur les rats et y mettre le feu, ou encore mieux prendre des flasques de feu d’alchimiste.
+
+\section{Les égouts}
+Déplacement dans les égouts : Le mouvement dans les égouts est difficile, car le sol est traître. Pour ne pas glisser, il faut se déplacer à
+demi-vitesse.\par Les \PJs devront descendre dans les égouts de jour car la nuit, c’est le domaine des rats. Pendant la journée, les rats dorment et
+cela permet aux \PJs d’avancer dans les égouts relativement facilement : la première heure, lancer un d6 et sur un 1, les \PJs font une rencontre.
+Puis recommencer la deuxième heure, avec une rencontre sur un résultat 1-2, et ainsi de suite. Lorsqu’une rencontre est obtenue, le jet suivant
+donnera une nouvelle rencontre sur un 1.
+
+\begin{dndtable}[lp{0.8\linewidth}]
+	\textbf{D100}  & \textbf{Rencontre} \\
+	01-40 & Cube gélatineux\\
+	41-60 & \dice{1d2 + 1} goules\\
+	61-90 & \dice{1d2 + 1} araignées géantes\\
+	91-100 & \dice{1d4 + 2} mille-pattes géants
+\end{dndtable}
+
+\subsection{Les combattants}
+Au bout d’un moment, des cris et des bruits de combat se font entendre. Dans un passage étroit, un groupe d’homme se bat avec des rats. Il s’agit du
+groupe du nain Fargrim. Ce dernier est parti chasser les rats avec quelques compagnons d’auberge, et ces derniers sont en mauvaise posture : 2 hommes
+sont à terre, et les 3 autres sont mal en point. Ils sont attaqués par 4 nuées de rats.\par Si les \PJs viennent au secours du groupe,
+Fargrim en sera reconnaissant et leur promet une bonne tournée de bière une fois dehors.
+\subsection{La cachette}
+Une fois l’exploration reprise, les \PJs verront furtivement un ou deux rats déguerpir à leur arrivée, jusqu’à ce qu’ils tombent sur la tanière de
+Silman. Ils errent dans les égouts pendant plusieurs heures. Si Gondar ne les avait pas accompagnés, ils « tombent » dessus au bout de \dice{2d4}
+heures de recherches, et Gondar leur demande de les suivre car il pense avoir trouvé la tanière de Silman. Si Gondar est avec eux, ils trouvent sur la
+tanière au bout de \dice{1d3+1} heures.\par Plus les \PJs s’approchent de la cache de Silman, plus ils ont l’impression que les égouts grouillent de
+rats.
+
+\section{La crypte}
+\subsection{Trouvés}
+Dans un des collecteurs, les \PJs arrivent à un endroit qui grouille de rats. Ils se tiennent devant une partie du collecteur qui s’est effondré, et
+une petite ouverture sur le côté est discernable. Gondar proposera d’utiliser l’huile et les feux d’alchimistes pour éliminer le plus de rats
+possibles. Il s’agit de 4 nuées de rats.
+\subsection{L’escalier}
+Une fois les rats éliminés, les \PJs pourront pénétrer dans ce qui ressemble un ancien escalier descendant dans les profondeurs de la terre.\par
+L’éboulement a en fait révélé cet escalier, dont le haut était muré.\par Silman a piégé l’entrée avec un rocher.
+
+\begin{quotebox}
+	Rocher (Piège mécanique) : ce piège utilise un fil de détente pour entraîner la chute d’un rocher maintenu en équilibre instable. Le fil de détente
+	est situé à environ 7,50 cm du sol et est tendu entre deux poutres supports. Le DD pour repérer le fil de détente est de 10. Un jet de Dextérité DD
+	15 réussi en utilisant des outils de voleur désactive sans danger le fil de détente. Un personnage qui ne possède pas d’outils de voleur peut tenter
+	ce jet avec un désavantage, il utiliser alors une arme tranchante ou tout objet coupant. En cas d’échec au jet, le piège se déclenche. Lorsque le
+	piège se déclenche il faut réussir un jet de sauvegarde de Dextérité DD 12 pour ne pas subir \dice{2d6} dégâts contondants en cas d’échec, ou la
+	moitié de ces dégâts en cas de réussite. 
+\end{quotebox}
+
+\subsection{L’antichambre}
+
+\begin{paperbox}{ }
+	Vous arrivez dans une petite pièce, d’environ 6 pas de large et 9 pas de profondeur, remplie de gravats. Les murs de la pièce sont nus, fait en
+	maçonnerie. Une ouverture se dessine dans le mur opposé. 
+\end{paperbox}
+L’antichambre est le refuge de la mère des rats et de 5 gros rats. Ils se jetteront sur les \PJs par surprise dès qu’au moins 2 des \PJs sont
+entrés. Pendant le combat, les 4 gros rats restants sont envoyés par Silman pour se battre eux aussi, au bout de \dice{1d3+2} rounds.
+
+\subsection{Le tombeau}
+\begin{paperbox}{ }
+	Vous arrivez dans une pièce un peu plus grande, d’environ 9 pas de large et 12 pas de profondeur. Les murs de la pièce sont fait en maçonnerie et
+	semblent décorés. Une sorte de sarcophage se trouve au milieu de la pièce.
+\end{paperbox}
+
+C’est de cette pièce que sont venus les 4 derniers gros rats et Silman s’y cache. Il essayera de s’enfuir, mais s’il est acculé, se défendra comme il
+peut. Silman est fou, et il est impossible de le raisonner. Il se transforme en forme hybride dès la première blessure. Gondar s’efforcera de
+l’attaquer dans le dos, pour pouvoir faire une attaque sournoise. Dans  cette tombe, les \PJs doivent faire un jet de Constitution (DD 8) toutes les
+minutes ou alors attraper la maladie.\par Dans le sarcophage, se trouve un squelette. Si les \PJs ouvrent le sarcophage, le squelette s’anime et les
+attaque. Chaque attaque du squelette peut provoquer la maladie, et sans incubation (comme le sort contagion), DD 12. Une fois le squelette détruit,
+une sorte de fumée s’élève des restes et disparaît. La pièce n’est plus contaminée.\par Les écrits dans la pièce racontent qu’il s’agissait de la
+tombe d’un Ancien, maudit, porteur de la fièvre des rats, malheureusement mortelle pour eux. Aussi, il s’est « donné » la mort, et il s’est fait
+enterrer à l’abri dans cette crypte.
+
+\section{Epilogue}
+Une fois Silman et les rats sanguinaires éliminés, les rats normaux ne sortent plus des égouts et il n’y a plus d’extension de l’épidémie, qui
+s’arrête au bout de 2 jours. La plupart des malades guérissent en quelques jours.\par Les \PJs pourront apporter les restes des rats géants, et dire
+qu’ils étaient la cause de l’épidémie. Gondar préfère passer sous silence l’existence de Silman. Le conseil des marchands offrira la récompense
+promise aux \PJs (entre 3000 et 5000 PO – 1000 PO par personnage en fait), et Gondar ne prendra pas sa part car il préfère rester discret (son
+objectif était d’éliminer Silman, en toute discrétion). Les PJ reçoivent également \XP{100} s’ils mettent fin à l’épidémie, et \XP{50} supplémentaires
+s’ils détruisent le squelette du draconien.
+
+\pagebreak
+\section{Les PNJs}
+
+\begin{monsterbox}{Gondar}
+	\begin{hangingpar}
+		\textit{Voleur (humain) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 14 (armure de cuir cloutée),
+	hitpoints  = \dice{4d8 + 4},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{10},
+	DEX = \stat{14},
+	CON = \stat{12},
+	INT = \stat{13},
+	WIS = \stat{12}
+	]
+	\dndline%
+	\details[%
+	skills={Athlétisme +2, Discrétion +4, Perception +3, Tromperie +2},
+	senses= Perception passive 13,
+	languages = {bas-thrain, vethrain, sethrain},
+	challenge= 1/2
+	]
+	\dndline%
+	\begin{monsteraction}[Attaque sournoise (1/tour)]
+		Gondar inflige \dice{2d6} dégâts supplémentaires quand il touche une cible lors d’une attaque avec une arme et qu’il a l’avantage au jet
+		d’attaque, ou lorsque la cible est 1,50 mètre ou moins d’un allié du voyou qui n’est pas incapable d’agir et si Gondar n’a pas un désavantage à son
+		jet d’attaque.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+2} dégâts perforants.
+	\end{monsteraction}
+	\begin{monsteraction}[Dague]
+		Attaque au corps à corps avec une arme : +5 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+2} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, dague de maître en argent alchimique, armure de cuir cloutée, potion de soins, \dice{3d6} PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Brutes de Gondar}
+	\begin{hangingpar}
+		\textit{Hommes de main (humain) de taille M, neutre mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 11 (armure de cuir),
+	hitpoints  = \dice{2d8+2},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{12},
+	CON = \stat{12}
+	]
+	\dndline%
+	\details[%
+	senses= Perception passive 10,
+	languages = {bas-thrain, vethrain},
+	challenge= 1/8
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée courte]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+1} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, armure de cuir.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Nuée de rats}
+	\begin{hangingpar}
+		\textit{Nuée de bêtes TP de taille M, sans alignement}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 10,
+	hitpoints  = \dice{7d8-7},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{9},
+	DEX = \stat{11},
+	CON = \stat{9},
+	INT = \stat{2},
+	CHA = \stat{3}
+	]
+	\dndline%
+	\details[%
+	conditionimmunities={à terre, agrippé, charmé, effrayé, entravé, étourdi, paralysé, pétrifié},
+	damageresistances={contondant, perforant, tranchant},
+	senses={Vision dans le noir à 9 m, Perception passive 10},
+	challenge= 1/4
+	]
+	\dndline%
+	\begin{monsteraction}[Odorat aiguisé]
+		La nuée a l’avantage aux jets de Sagesse (Perception) qui reposent sur l’odorat.
+	\end{monsteraction}
+	\begin{monsteraction}[Nuée]
+		La nuée peut occuper l’espace d’une créature et vice versa, et peut passer par une ouverture suffisamment grande pour un rat de taille TP. La nuée
+		ne peut pas regagner de points de vie ou gagner des points de vie temporaires. 
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Morsures]
+		Attaque au corps à corps avec une arme : +2 au toucher, allonge 0 m, une cible dans l’espace de la nuée. Touché : \dice{2d6} dégâts perforants, ou 
+		\dice{1d6} si la nuée ne possède plus que la moitié ou moins de ses points de vie.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{mère des rats}
+	\begin{hangingpar}
+		\textit{Bête de taille P, sans alignement}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 13,
+	hitpoints  = \dice{4d6+8},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{9},
+	DEX = \stat{17},
+	CON = \stat{14},
+	INT = \stat{2},
+	CHA = \stat{3}
+	]
+	\dndline%
+	\details[%
+	senses={Vision dans le noir à 9 m, Perception passive 10},
+	challenge= 1/4
+	]
+	\dndline%
+	\begin{monsteraction}[Odorat aiguisé]
+		La mère des rats a l’avantage aux jets de Sagesse (Perception) qui reposent sur l’odorat.
+	\end{monsteraction}
+	\begin{monsteraction}[Tactique de groupe]
+		La mère des rats a l’avantage aux jets d’attaque contre une créature si au moins l’un de ses alliés est à 1,50 mètre ou moins de la créature et
+		n’est pas incapable d’agir.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Morsure]
+		Attaque au corps à corps avec une arme : +3 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+3} dégâts perforants. Si la cible est une
+		créature, elle doit réussir un jet de sauvegarde de Constitution DD 10 ou contracter la fièvre des rats.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{rat géant}
+	\begin{hangingpar}
+		\textit{Bête de taille P, sans alignement}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 12,
+	hitpoints  = \dice{2d6},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{7},
+	DEX = \stat{15},
+	CON = \stat{11},
+	INT = \stat{2},
+	CHA = \stat{3}
+	]
+	\dndline%
+	\details[%
+	senses={Vision dans le noir à 9 m, Perception passive 10},
+	challenge= 1/8
+	]
+	\dndline%
+	\begin{monsteraction}[Odorat aiguisé]
+		Un rat a l’avantage aux jets de Sagesse (Perception) qui reposent sur l’odorat.
+	\end{monsteraction}
+	\begin{monsteraction}[Tactique de groupe]
+		Un rat a l’avantage aux jets d’attaque contre une créature si au moins l’un de ses alliés est à 1,50 mètre ou moins de la créature et n’est pas
+		incapable d’agir.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Morsure]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+2} dégâts perforants.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Silman}
+	\begin{hangingpar}
+		\textit{Humanoïde (humain, métamorphe) de taille M, loyal mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 12,
+	hitpoints  = \dice{6d8+6},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{13},
+	DEX = \stat{15},
+	CON = \stat{13},
+	WIS = \stat{12},
+	CHA = \stat{6}
+	]
+	\dndline%
+	\details[%
+	skills={Athlétisme +3, Acrobaties +4, Discrétion +4, Perception +3},
+	damageimmunities={contondant, perforant et tranchant d’attaques non magiques non réalisées avec des armes en argent},
+	senses={Vision dans le noir à 18 m (forme de rat uniquement), Perception passive 13},
+	languages = {bas-thrain, vethrain (ne peut pas parler sous forme de rat)},
+	challenge= 2
+	]
+	\dndline%
+	\begin{monsteraction}[Métamorphe]
+	Silman peut utiliser son action pour se métamorphoser en un hybride humanoïde-rat ou en un rat géant, ou pour revenir à sa véritable forme (la forme
+	humanoïde). Ses statistiques, autres que sa taille, sont les mêmes quelle que soit sa forme. L’équipement qu’il porte ou transporte n’est pas
+	transformé. Il retrouve sa forme véritable s’il meurt.
+	\end{monsteraction}
+	\begin{monsteraction}[Odorat aiguisé]
+		Silman a l’avantage aux jets de Sagesse (Perception) qui reposent sur l’odorat.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Attaques multiples (forme humanoïde ou hybride uniquement)]
+		Silman effectue deux attaques, une seule des deux peut être une attaque de morsure.
+	\end{monsteraction}
+	\begin{monsteraction}[Morsure (forme de rat ou hybride uniquement)]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+2} dégâts perforants. Si la cible est un
+		humanoïde, elle doit réussir un jet de sauvegarde de Constitution DD 11 sous peine d’être atteinte de la lycanthropie de rat-garou.
+	\end{monsteraction}
+	\begin{monsteraction}[Épée courte (forme humanoïde ou hybride uniquement)]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+2} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée courte, armure de cuir cloutée, 150 PO cachées dans un sac.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{squelette draconien}
+	\begin{hangingpar}
+		\textit{Mort-vivant de taille M, sans alignement}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 14,
+	hitpoints  = \dice{8d8+8},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{16},
+	DEX = \stat{14},
+	CON = \stat{13},
+	INT = \stat{6},
+	WIS = \stat{8},
+	CHA = \stat{5}
+	]
+	\dndline%
+	\details[%
+	damagevulnerabilities=contondant,
+	damageimmunities=poison,
+	conditionimmunities={épuisé, empoisonné},
+	senses={Vision dans le noir à 18 m, Perception passive 9},
+	challenge= 2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Attaques multiples]
+		Le squelette effectue deux attaques de griffes.
+	\end{monsteraction}
+	\begin{monsteraction}[Griffes]
+		Attaque au corps à corps avec une arme : +6 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d8+3} dégâts tranchants. Si la cible est une
+		créature, elle doit réussir un jet de sauvegarde de Constitution DD 12 ou contracter la fièvre des rats, sans temps d’incubation.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Fargrim}
+	\begin{hangingpar}
+		\textit{Guerrier (\Nain) de taille M, loyal bon}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = {17 (cuirasse, bouclier)},
+	hitpoints  = 20 (2d10 + 6),
+	speed      = {7,5 m}
+	]
+	\dndline%
+	\stats[
+	STR = \stat{16},
+	DEX = \stat{11},
+	CON = \stat{14},
+	INT = \stat{12},
+	WIS = \stat{13}
+	]
+	\dndline%
+	\details[%
+	skills={Perception +3, Perspicacité +3, Persuasion +2, Survie +3},
+	savingthrows= {For +5, Con +4},
+	damageresistances=poison,
+	senses= Perception passive 13,
+	languages = {kad-ish, bas-thrain, glamhoth},
+	challenge= 1/2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Hache d’armes]
+		Attaque au corps à corps avec une arme : +5 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d8+3} dégâts tranchants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Hache d’armes, dague, cuirasse, bouclier en bois, \dice{2d6+3} PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\end{multicols}
+
+\chapter{Voyage}
+
+\begin{multicols}{2}
+
+\section{Retour chez les Abertus}
+Le lendemain de la fin du marché, les \PJs auront la visite de Blanche, qui les invite le lendemain pour voir Aurore chez elle.\par L’accueil à la
+maison Abertus se fait de la même manière que quelques jours avant. Le même serviteur leur demande de patienter un moment avant de voir Aurore.\par Au
+bout de quelques instants, ils peuvent voir Aurore. Celle-ci a besoin d’une « escorte » pour se rendre dans la capitale du royaume d’Ansaman (royaume
+de la Sagesse), afin d’avoir plus de renseignements sur la carte.\par Le trajet prévu, d’une durée estimée de 18 jours, traverse en partie les
+royaumes de Mescarol et de Marienad, qui sont des terres civilisées, mais présentent également des lieux sauvages qui n’offrent que peu d’abris. Elle
+voyage avec une carriole tractée par un boeuf pour porter les vivres et sa tente de voyage.\par Les \PJs ont tout loisir de négocier leurs gages, mais
+cela ne dépassera pas 2 PO par jour.
+
+\section{Une sombre forêt}
+Le voyage commence sans histoires, malgré le mauvais temps de cette saison d’automne, et les \PJs ne croisent que quelques voyageurs. L’essentiel du
+trajet se fait dans de vastes plaines, la plupart de temps celles-ci sont cultivées.
+
+\subsection{De vielles connaissances}
+Cependant, l’aventure les rattrape alors qu’ils entrent dans une forêt épaisse et sombre. Ils y sont entrés depuis déjà une demi-heure, lorsqu’un cri
+retentit, tout proche.
+\begin{paperbox}{ }
+	Cela fait maintenant deux heures que vous êtes entrés dans cette forêt. Les arbres sont denses, leur feuillage épais obscurcissant la rare lumière
+	venant du ciel chargé de nuages. Le chemin de terre défoncé est la seule trace de civilisation apparente. Le cri venant d’un peu plus loin dans la
+	route déchire le calme oppressant de cette forêt.
+\end{paperbox}
+Si les \PJs se précipitent, ils voient un homme, agenouillé près d’un corps à terre, faisant face à un tigre vert. Le corps allongé est celui d’un
+guerrier en armure. Le symbole sur le bouclier est celui d’Esus. Le tigre semble hésiter et tourne autour de ses proies (il est légèrement blessé, et
+il lui manque 10 PV). L’homme agenouillé est en fait Albrafeust, et le corps au sol est celui d’Ellys.\par Le tigre hésite un temps, puis attaque
+(en charge) le personnage le plus fort (celui qui fait office de guerrier dans le groupe). S’il descend à moins de 10 pv, ou si les PJ utilisent du
+feu, il s’enfuit.\par Une fois le combat terminé, les \PJs peuvent se mettre au chevet d’Ellys. Elle est inconsciente, à 0 pv, et elle est stabilisée.
+Si personne ne la soigne, elle reprend conscience au bout de \dice{1d4} heures. Albrafeust demande au groupe s’il peut l’accompagner jusqu’au prochain
+abri (auberge ou autre) pour qu’Ellys puisse se soigner.\par En chemin, Albrafeust raconte qu’Ellys et lui voyageaient en direction de Marienad. Ils
+étaient partis de Loison dès la fin de l’épidémie, car Ellys voulait faire un rapport en personne au grand temple d’Esus.\par Mais dans la forêt, le
+tigre est soudainement apparu, leur bloquant la route. Ellys s’est mise en avant en espérant que l’animal les laisserait tranquille, car elle ne
+voulait pas l’attaquer si ce dernier n’était pas belliqueux. Mais le tigre devait être affamé car il a bondi sur Ellys qui s’est retrouvée à terre.
+Albrafeust a alors utilisé un sortilège (Mains Brûlantes), ce qui a repoussé le tigre, et il a porté les premiers secours à Ellys.
+
+\subsection{Le tertre}
+\subsubsection{La tempête}
+Plusieurs heures après être sortis de la forêt, le groupe se retrouve en pleine tempête, alors que la journée est bien avancée. Le ciel s’est obscurci
+toute la journée, et la pluie a menacé de tomber toute la journée. Alors que la journée se termine, la pluie finit par s’installer, accompagnée de
+forts coups de tonnerre qui semblent rouler à travers le paysage. Le soleil est caché par de lourds nuages noirs, et un vent froid souffle du nord.
+Lorsque les éclairs commencent à frapper le sol et que la grêle se met à tomber, le besoin d’un abri se fait nécessité.\par 
+Non loin, une forme noire est illuminée par les éclairs. Elle semble solide, et sa base pourrait peut-être apporter une sécurité relative face à la
+tempête.\par La forme noire est située à une faible distance de la route, au sud. En s’approchant, il devient possible de voir qu’il s’agit d’un
+tertre.
+
+\subsubsection{La grande salle}
+Pour se mettre à l’abri il faut le contourner. C’est là qu’apparaît, invisible depuis la route, une ouverture en pierre. En passant cette porte, le
+groupe entre dans un couloir, juste assez grand pour la carriole et le bœuf. Ce dernier est réticent et semble avoir peur de rentrer (Dressage, DD 15
+pour le faire entrer).
+\begin{paperbox}{ }
+	La salle en pierre fait environ vingt pas de long, sur dix de large. Les restes de peinture et de tapisseries suggère que ce lieu était décoré
+	autrefois. Une porte massive en pierre se trouve au fond de la salle.
+\end{paperbox}
+Albrafeust s’occupe d’installer Ellys le mieux possible pour qu’elle puisse se reposer. En fait, tout le monde, humains et bœuf, est bien fatigué et a
+besoin de repos.
+
+\subsection{les \DemiOrcs}
+Le début de la nuit se passe sans encombre, mais vers minuit, alors que la tempête redouble, un groupe de \DemiOrcs tente de s’abriter lui aussi dans
+le tertre. Le bruit de la tempête ne permet pas de les entendre arriver, et ce n’est que lorsqu’ils pénètrent dans la salle que les monstres peuvent
+être détectés.\par Au début de la rencontre, le premier \DemiOrc charge le \PJs de garde, les autres entrent dans la salle et se
+préparent au combat. Les \DemiOrcs se battent jusqu’à la mort.
+
+\section{Le mausolée}
+\subsection{Couloir d’accès}
+La porte au fond de la salle donne sur un couloir, qui s’enfonce profondément dans le tertre. La porte est très lourde, mais n’est pas verrouillée.
+Pour l’ouvrir, il faut la soulever, et elle pèse plus de 350 kg. Sur la porte se trouvent deux excroissances en pierre, qui peuvent servir de poignée.
+Il faut deux personnes avec au moins 14 en Force pour pouvoir la soulever ainsi. Une fois entièrement levée, un clic se fait entendre, et elle se
+verrouille en position ouverte.
+\begin{paperbox}{ }
+	Un long couloir s’ouvre et descend dans l’obscurité. Les murs nus sont en pierre de maçonnerie. Le sol est glissant car la pente est assez forte.
+\end{paperbox}
+Le couloir descend fortement sur une trentaine de mètres. Les \PJs se déplaçant rapidement dans ce couloir doivent faire un jet de Dextérité
+(Acrobaties) DD 10 pour conserver leur équilibre, sinon ils tombent par terre.
+\subsection{Salle aux alcôves}
+\begin{paperbox}{ }
+	Le couloir débouche sur une grande salle rectangulaire, d’une dizaine de pas de large sur une vingtaine de pas de long. Les murs sont taillés
+	dans la pierre. De nombreuses alcôves ont été creusées de part et d’autres de la salle, et une porte en maçonnerie est visible au fond.
+\end{paperbox}
+En fouillant la salle, les \PJs découvrent que dans chaque alcôve se trouve un squelette équipé avec une épée longue, un écu en acier et une cuirasse.
+L’équipement des squelettes est rouillé.\par Il y a également deux autres squelettes dans la pièce. Ils portent des habits qui tombent en poussière,
+et leurs équipements n’ont pas l’air dans un meilleur état. Fouiller ces cadavres permet de trouver une corde en soie, du matériel d’escalade, un pic
+en bon état, une dague de maître en argent alchimique, un parchemin magique (profane) de \emph{Déblocage}, ainsi que deux potions (magiques :
+\emph{Soins améliorés} et \emph{Force de Géant des collines}).\par Autour de la porte du fond sont gravés des dessins qui n’ont pas de signification.
+La porte s’ouvre comme celle de la première salle, si ce n’est qu’elle est piégée. Dès qu’un personnage touche la porte, celle-ci lance le sortilège
+d’animation des morts sur les  squelettes dans les alcôves, et libère le verrou maintenant ouverte la porte d’accès au couloir. 10 Squelettes (2 par
+\PJ) se dressent à l’attaque des  \PJs. La porte, une fois soulevée, reste dans cette position, jusqu’à ce que la porte d’accès soit de nouveau
+soulevée. Dans ce cas, la porte retombe au sol.
+
+\subsection{Salle au puits}
+\begin{paperbox}{ }
+	La porte du fond ouvre sur une petite salle, qui semble vide. Les murs, le sol et le plafond sont fait en maçonnerie.
+\end{paperbox}
+Un jet d’Intelligence (Investigation) DD 15 révèle qu’une dalle au centre de la pièce peut se soulever, et elle cache l’ouverture d’un sombre
+puit.\par L’air qui s’échappe du puit est chargé d’humidité, ainsi que d’une odeur nauséabonde indéfinissable. Les parois du puit sont glissantes, et
+l’escalade semble impraticable sauf en s’arc-boutant entre les parois, jet de Force (Athlétisme) DD 20. Le puit est large de 80 cm, profond de 10 m,
+sa hauteur totale est de 13 m (\dice{4d6} points de dégâts contondants en cas de chute).
+
+\subsection{Salle inondée}
+Le puits débouche dans le plafond d’une grotte souterraine inondée, à une hauteur de 3m environ. La fin de la descente est donc une chute, ou un saut
+en contrebas.
+\begin{paperbox}{ }
+	Vous êtes arrivés dans une grotte. La partie de la grotte ou le puits débouche est légèrement surélevée et le sol est fait en maçonnerie. Le reste
+	s’enfonce dans de l’eau noire et glaciale.
+\end{paperbox}
+La grotte est de forme vaguement circulaire, atteignant dans sa plus grande largeur près de 80 m et dans sa longueur un peu moins de 30 mètres. La
+hauteur moyenne d’eau dans la salle est de 80 centimètres. Le lac rempli entièrement la salle souterraine, à l’exception de la plate-forme d’arrivée
+du puits, et de l’autre extrémité de la salle, elle aussi surélevée. La lumière d’une torche ne suffit pas à éclairer toute la salle, et même une
+lanterne ne permet pas d’en voir l’autre côté.\par Un serpent constricteur hante le lac souterrain, et il s’approche discrètement de tout \PJ se
+déplaçant dans l’eau. Si le serpent touche son adversaire, il engage une lutte pour essayer de le prendre dans ses anneaux.\par Le serpent a établi
+son nid de l’autre côté du lac, sur l’autre partie surélevée. Elle aussi est faite en maçonnerie. C’est de cet endroit que provient la puanteur du
+lieu. Dans les déchets nauséabonds, sur un jet d’Intelligence (Investigation) DD 18 réussi, les \PJs trouvent une \emph{Baguette d’éclairs}. Il y a
+une ouverture au plafond, similaire à celle du puits de descente. Mais cette fois, l’ouverture ne fait que 50 cm. Pour pouvoir passer dans la pièce
+supérieure, il faut atteindre une hauteur de 3,5 mètres.
+
+\subsection{Salle aux fléchettes}
+\begin{paperbox}{ }
+	L’ouverture dans le sol donne sur un couloir en maçonnerie. La dalle fermant l’ouverture est brisée. À une dizaine de mètres de là, un corps gît au
+	sol. De nombreux dards sont éparpillés tout autour de lui.
+\end{paperbox}
+Le corps est celui d’un homme. Son équipement semble en très mauvais état, à l’exception de ses bracelets de défense. 
+
+\begin{quotebox}
+	Volée de fléchettes (Piège mécanique) : ce piège est activé lorsqu’un intrus pose le pied sur une plaque de pression dissimulée, envoyant une volée
+	de darts tirées depuis des tubes à ressort ou intelligemment incorporés aux murs alentours. La zone comporte une dizaine de plaques, mais seulement
+	deux sont encore actives. Le DD pour repérer les trous est de 15. Avec un jet d’Intelligence (Investigation) DD 15 réussi, un personnage peut
+	détecter les plaques à pression. Coincer un piton de fer ou tout autre objet sous la plaque à pression empêche le piège de s’activer. Boucher les
+	trous avec du tissu ou de la cire empêche les fléchettes qui s’y trouvent d’être lancées. Le piège s’active lorsque au moins 10 kilos sont placés sur
+	la plaque de pression, relachant \dice{2d4} darts. Chaque fléchette effectue une attaque à distance avec un bonus de +8 contre une cible aléatoire se
+	trouvant à 3 mètres ou moins de la plaque à pression (ne pas tenir compte de la vision pour ce jet d’attaque). (S’il n’y a aucune cible dans cette
+	zone, les fléchettes ne touchent rien.) Une cible qui est touchée subit \dice{1d4+1} dégâts perforants.
+\end{quotebox}
+
+Dans ce long couloir, il y a encore 2 pièges actifs (volées de fléchettes). Il est possible d’éviter de déclencher les pièges une fois détectés, mais
+cela nécessite de se déplacer à vitesse lente et 1 par 1. Les fléchettes sont tirées des 2 côtés du couloir.
+
+\subsection{Antichambre}
+\begin{paperbox}{ }
+	Le couloir débouche enfin sur une salle un peu plus grande, d’environ 10 pas de côté pour autant de profondeur. Des restes de meubles et d’objets
+	calcinés sont éparpilles dans la pièce. Une porte en pierre est visible de l’autre côté. Le corps d’un homme en armure est adossé à la porte en
+	pierre Il semble qu’un violent combat ait eu lieu dans cette pièce. L’homme mort en armure tient encore son écu et son morgenstern. Sur le bouclier,
+	vous pouvez distinguer le symbole de Lokapol, le dieu de la conquête. Trois cadavres gisent à ses pieds.
+\end{paperbox}
+
+Un jet d’Intelligence DD 15 permet d’identifier les cadavres comme des restes de goules.\par L’équipement du prêtre mort est hors d’usage, mais son
+bouclier peut être ramené au temple de Lokapol pour obtenir une récompense.\par La porte en pierre se soulève comme les autres  portes, et reste en
+position haute également. Un jet d’Intelligence (Investigation) DD 18 permet de trouver le loquet maintenant la porte en position haute.
+
+\subsection{Salle au sarcophage}
+\begin{paperbox}{ }
+	Cette pièce est richement meublée, et en assez bon état. Un sarcophage majestueux se trouve au centre de la pièce. Au fond, il est possible de
+	distinguer un coffre artistiquement décoré. Juste à l’entrée, les restes d’un corp. Son équipement est éparpillé autour de lui.
+\end{paperbox}
+Trois goules sont tapies dans l’ombre et attendent pour attaquer les \PJs. Elles sont prisonnières de la salle au sarcophage depuis que le groupe
+précédent y a pénétré et elles sont affamées.\par Le corps à l’entrée est celui d’un magicien évocateur, et de son équipement seul son grimoire est
+encore en état.
+\begin{quotebox}
+	Grimoire (valeur 2200 PO)\par\noindent
+	Il contient les sorts suivants : (niveau 1) Armure de mage, Compréhension des langues, Feuille morte, Mains brûlantes, Projectile magique, (niveau 2)
+	Déblocage, Flamme éternelle, Rayon ardent, Toile d’araignée, Verrou magique, (niveau 3) Boule de feu, Contresort.
+\end{quotebox}
+Le sarcophage est recouvert d’une pierre pesant 1/2 tonne qu’il faut faire glisser pour en révéler l’intérieur. Dedans gît un squelette,
+portant encore armes et armures. Seule son arme, une épée longue +1, est encore en bon état.\par Le coffre est piégé par une aiguille empoisonnée. Une
+fois ouvert, les \PJs trouvent une sacoche contenant \dice{5d6x10} PO, un étui à parchemin contenant 2 parchemins (Divins - \emph{Protection contre le
+poison}, \emph{Restauration partielle}), des objets précieux pour une valeur de 1500 PO, des livres pour une valeur de 250 PO.
+
+\begin{quotebox}
+	Aiguille empoisonnée (Piège mécanique) : une aiguille empoisonnée est dissimulée dans la serrure du coffre. Ouvrir le coffre sans la bonne clef fait
+	jaillir l’aiguille qui délivre alors sa dose de poison. Lorsque ce piège est déclenché, l’aiguille surgit hors de la serrure sur 7,5 cm environ. Une
+	créature se trouvant à portée subit 1 point de dégât perforant et \dice{2d10} dégâts de poison, et doit réussir un jet de sauvegarde de Constitution
+	DD 15 sous peine d’être empoisonnée pendant 1 heure. Un jet d’Intelligence (Investigation) DD 20 réussi permet au personnage de déduire de la
+	présence du piège d’après les modifications qu’a subi la serrure pour y incorporer l’aiguille. Un jet de Dextérité DD 15 réussi en utilisant des
+	outils de voleur permet de désamorcer le piège, en arrachant l’aiguille de la serrure. Un échec lors d’une tentative de crochetage de la serrure
+	déclenche le piège.
+\end{quotebox}
+
+\section{Fin du voyage}
+Le reste du voyage se fait sans autres encombres. La route est assez sûre, passant dans des terres civilisées, et les \PJs croisent des patrouilles.
+
+\section{Les PNJs}
+\begin{monsterbox}{Tigre vert}
+	\begin{hangingpar}
+		\textit{Bête de taille G, sans alignement}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 12,
+	hitpoints  = \dice{7d10+14},
+	speed      = 12 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{18},
+	DEX = \stat{14},
+	CON = \stat{15},
+	INT = \stat{3},
+	WIS = \stat{12},
+	CHA = \stat{8}
+	]
+	\dndline%
+	\details[%
+	skills={Discrétion +6, Perception +3},
+	senses=Perception passive 13,
+	challenge= 2
+	]
+	\dndline%
+	\begin{monsteraction}[Odorat aiguisé]
+		Un tigre a l’avantage aux jets de Sagesse (Perception) qui reposent sur l’odorat.
+	\end{monsteraction}
+	\begin{monsteraction}[Bond]
+		Si le tigre se déplace d’au moins 6 mètres en ligne droite vers une créature, et la touche lors d’une attaque avec ses griffes dans le même tour, la
+		cible doit réussir un jet de sauvegarde de Force DD 14 pour ne pas tomber à terre. Si la cible est à terre, le tigre peut effectuer une attaque de
+		morsure contre elle en tant qu’action bonus.
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Griffes]
+		Attaque au corps à corps avec une arme : +6 au toucher, allonge 1,50 m, une cible. Touché : \dice{2d6+5} dégâts tranchants.
+	\end{monsteraction}
+	\begin{monsteraction}[Morsures]
+		Attaque au corps à corps avec une arme : +6 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d10+5} dégâts perforants.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{les \DemiOrcs}
+	\begin{hangingpar}
+		\textit{Humanoïde (\DemiOrc) de taille M, chaotique mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 13 (armure de peau),
+	hitpoints  = \dice{7d10+14},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{16},
+	DEX = \stat{12},
+	CON = \stat{16},
+	INT = \stat{7},
+	WIS = \stat{11},
+	CHA = \stat{10}
+	]
+	\dndline%
+	\details[%
+	skills={Intimidation +2},
+	senses={vision dans le noir à 18 m, Perception passive 10},
+	languages = {glamhoth, bas-thrain},
+	challenge=1/2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Hache à deux mains]
+		Attaque au corps à corps avec une arme : +5 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d12 + 3} dégâts tranchants.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{squelettes}
+	\begin{hangingpar}
+		\textit{Mort-vivant de taille M, sans alignement}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = {18 (cuirasse, bouclier en acier)},
+	hitpoints  = \dice{3d8+6},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{10},
+	DEX = \stat{14},
+	CON = \stat{15},
+	INT = \stat{6},
+	WIS = \stat{8},
+	CHA = \stat{5}
+	]
+	\dndline%
+	\details[%
+	damagevulnerabilities=contondant,
+	damageimmunities=poison,
+	conditionimmunities={épuisé, empoisonné},
+	senses={Vision dans le noir à 18 m, Perception passive 9},
+	challenge= 1/2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée longue]
+		Attaque au corps à corps avec une arme : +2 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d8} dégâts tranchants.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{serpent constricteur géant}
+	\begin{hangingpar}
+		\textit{Bête de taille TG, sans alignement}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 12,
+	hitpoints  = \dice{8d12+8},
+	speed      = {9 m, nage 9m}
+	]
+	\dndline%
+	\stats[
+	STR = \stat{19},
+	DEX = \stat{14},
+	CON = \stat{12},
+	INT = \stat{1},
+	CHA = \stat{3}
+	]
+	\dndline%
+	\details[%
+	skills=Perception +2,
+	senses={Vision aveugle à 3 m, Perception passive 12},
+	challenge= 2
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Morsure]
+		Attaque au corps à corps avec une arme : +6 au toucher, allonge 3 m, une cible. Touché : \dice{2d6+4} dégâts perforants.
+	\end{monsteraction}
+	\begin{monsteraction}[Étreinte]
+		Attaque au corps à corps avec une arme : +6 au toucher, allonge 3 m, une cible. Touché : \dice{2d8+4} dégâts contondants, et la cible est agrippée
+		(DD 16 pour s’échapper). Jusqu’à ce que la lutte se termine, la créature est entravée, et le serpent ne peut pas étreindre une autre cible.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{goule}
+	\begin{hangingpar}
+		\textit{Mort-vivant de taille M, chaotique mauvais}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 12,
+	hitpoints  = \dice{5d8},
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{13},
+	DEX = \stat{15},
+	INT = \stat{7},
+	CHA = \stat{6}
+	]
+	\dndline%
+	\details[%
+	damageimmunities=poison,
+	conditionimmunities={charmé, épuisé, empoisonné},
+	senses={Vision dans le noir à 18 m, Perception passive 10},
+	languages = bas-thrain,
+	challenge= 1
+	]
+	\dndline%
+	\monstersection{Actions}
+	\begin{monsteraction}[Griffes]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{2d4+2} dégâts tranchants. Si la cible est une
+		créature autre qu’un \Elfe ou un mort-vivant, celle-ci doit réussir un jet de sauvegarde de Constitution DD 10 pour ne pas être paralysée pendant 1
+		minute. La cible peut relancer le jet de sauvegarde à la fin de chacun de ses tours, mettant fin à l’effet sur elle-même en cas de réussite.
+	\end{monsteraction}
+	\begin{monsteraction}[Morsure]
+		Attaque au corps à corps avec une arme : +2 au toucher, allonge 1,50 m, une cible. Touché : \dice{2d6+2} dégâts perforants.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Albrafeust}
+	\begin{hangingpar}
+		\textit{Ensorceleur (lignée draconique) 3 humain de taille M, neutre bon}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = 16,
+	hitpoints  = 20 (3d6 + 6),
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	DEX = \stat{14},
+	CON = \stat{12},
+	INT = \stat{14},
+	WIS = \stat{13},
+	CHA = \stat{16}
+	]
+	\dndline%
+	\details[%
+	savingthrows= {For +1, Dex +3, Con +4, Int +3, Sag +2, Cha +6},
+	skills= {Arcanes +4, Discrétion +4, Religion +4, Représentation +5},
+	senses=Perception passive 11,
+	languages = {bas-thrain, vethrain, haut-thrain, draconique, elvish},
+	challenge= 1
+	]
+	\dndline%
+	\begin{monsteraction}[Sorts]
+	Albrafeust est un lanceur de sorts de niveau 3. Sa caractéristique pour lancer des sorts est le Charisme (sauvegarde contre ses sorts DD 13, +5 au
+	toucher pour les attaques avec un sort). Il dispose de des emplacements de sorts suivant : 4/2, de 3 points de magie, et connait les sorts suivants :
+	\par\noindent
+	Sorts connus (4) / 3 / 1
+	\begin{itemize}
+	  \item Niv 0 : Rayon de givre, Lumière, Réparation, Illusion mineure\\
+	  \item Niv 1 : Bouclier, Mains brûlantes, Projectile magique\\
+	  \item Niv 2 : rayon ardent
+	\end{itemize}
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Bâton]
+		Attaque au corps à corps avec une arme : +2 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6} dégâts contondants, ou \dice{1d8} dégâts
+		contondants à deux mains.
+	\end{monsteraction}
+	\begin{monsteraction}[Dague]
+		Attaque au corps à corps avec une arme : +5 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d4+2} dégâts perforants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Bâton, dague de maître, anneau de protection, potion de soins, une bague en or avec un grenat d'une valeur de 450 PO, une flûte, 60 PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\begin{monsterbox}{Ellys}
+	\begin{hangingpar}
+		\textit{Clerc (lumière) 2 Guerrier 1 humain de taille M, loyal bon}
+	\end{hangingpar}
+	\dndline%
+	\basics[%
+	armorclass = {18 (cuirasse, bouclier +1)},
+	hitpoints  = 21 (2d8 + 1d10 + 3),
+	speed      = 9 m
+	]
+	\dndline%
+	\stats[
+	STR = \stat{14},
+	DEX = \stat{11},
+	CON = \stat{12},
+	INT = \stat{12},
+	WIS = \stat{16},
+	CHA = \stat{14}
+	]
+	\dndline%
+	\details[%
+	savingthrows= {Sag +5, Cha +4},
+	skills= {Histoire +3, Médecine +5, Perspicacité +5, Religion +3},
+	senses=Perception passive 16,
+	languages = {bas-thrain, nothrain, haut-thrain, céleste, abyssal},
+	challenge= 1
+	]
+	\dndline%
+	\begin{monsteraction}[Sorts]
+	Ellys est une lanceuse de sorts de niveau 2. Sa caractéristique pour lancer des sorts est la Sagesse (sauvegarde contre ses sorts DD 13, +5 au
+	toucher pour les attaques avec un sort). Elle dispose de des emplacements de sorts suivant : 3, et des les sorts suivants :\par\noindent
+	Sorts connus / préparés
+	\begin{itemize}
+	  \item Niv 0 : Lumière, Flamme sacrée, Stabilisation\\
+	  \item Niv 1 : Bénédiction, Éclair guité, Injonction, Mains brûlantes, Soins
+	\end{itemize}
+	\end{monsteraction}
+	\monstersection{Actions}
+	\begin{monsteraction}[Épée longue]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d8+2} dégâts tranchants.
+	\end{monsteraction}
+	\begin{monsteraction}[Masse d'armes]
+		Attaque au corps à corps avec une arme : +4 au toucher, allonge 1,50 m, une cible. Touché : \dice{1d6+2} dégâts contondants.
+	\end{monsteraction}
+	\dndline%
+	\begin{monsteraction}[Possessions]
+		Épée longue, masse d'armes, dague, cuirasse, bouclier +1, potion de soins, une bague en or avec un rubis d'une valeur de 850
+		PO, une flûte, 90 PO.
+	\end{monsteraction}
+\end{monsterbox}
+
+\end{multicols}
+
+\chapter{Ansaman}
+Le reste du voyage se passe sans incidents. Ellys et Albrafeust ont déjà quitté le groupe, car leur chemin ne vas pas jusqu’à Ansaman : ils vont en
+fait dans le royaume de Marienad (royaume de la pureté).
+\begin{multicols}{2}
+\section{Le vieil érudit}
+\subsection{La ville}
+La ville d’Ansaman est la capitale du royaume de même nom. La ville est consacrée à Bellone, le Dieu de la Sagesse. C’est une ville réputée pour ses
+érudits, et sa bibliothèque, que tout magicien rêve d’explorer.\par  Le grand temple est consacré à Bellone, mais on trouve également en ville des
+temples consacrés à Esus (Pureté), Nout (Offrande), Indrani (Compassion), et d’autres moins importants consacrés à Parvati (Amour), Selène (Vie),
+Portunis (Guérison), Lokapol (Conquête), Taranis (Justice), Athar (Pauvreté).\par La Loi est un des principes de Bellone, aussi le maintien de l’ordre
+est strict et de nombreux gardes patrouillent en ville. Le port des armes est réglementé, et le groupe de \PJs est fortement invité à laisser ses
+armes à l’auberge, par les gardes aux portes de la ville, s’ils veulent éviter les ennuis. L’entrée dans la ville est tout de même facilitée par la
+présence d’Aurore, dont le nom de famille est assez connu. Les gardes demandent cependant à chaque \PJ son nom, et fournissent des papiers servant à
+l’identification, qu’ils devront garder pendant toute la durée de leur séjour à Ansaman.
+
+\subsection{Disparition}
+Aurore veut aller voir un vieil ami de son père, Raldiniar, qui travaillait à la bibliothèque. Mais arrivés à sa demeure, ils ont la mauvaise surprise
+de la trouver vide de tout occupant.\par Un voisin s’enquiert de l’intérêt du groupe pour la maison. Si les \PJs sont amicaux avec lui, il indiquera
+au groupe qu’un carrosse est passé 6 jours auparavant. Le lendemain, il a vu également des hommes charger sur une charrette de nombreux ouvrages
+anciens.\par Si les \PJs entrent dans la maison, ils constatent qu’elle a été fouillée de fond en comble : tous les ouvrages (livres) ont disparus.
+Mais pour cela, il vaut mieux demander d’abord à la garde, sans quoi une patrouille arrive en 10 minutes pour les questionner.
+
+\subsection{Enquête}
+Plusieurs pistes se présente aux \PJs : se renseigner à la Bibliothèque ou travaillait Raldiniar, rechercher le carrosse qui l’a emmené, en savoir
+plus sur les hommes venus chercher ses livres,\ldots\par Tout d’abord, à la Bibliothèque : l’entrée du bâtiment n’est pas libre ; les visiteurs
+doivent payer un droit d'entrée de 50 PO pour la journée, et encore l’accès n’est autorisé qu’aux personnes lettrées. Une fois entrés, les \PJs
+peuvent apprendre qu’avant sa disparition, Raldiniar avait reçu 3 visiteurs, mais il s’agissait d’hommes de lettres d’autres villes, des habitués de
+la bibliothèque. Autour de la Bibliothèque, les \PJs peuvent rencontrer de nombreuses personnes coutumières des lieux, et peuvent rencontrer un érudit
+intéressé par la crypte découverte à Loison, ainsi que par la description du squelette.\par Rechercher le carrosse demande plus de temps. Les \PJs
+vont devoir visiter les différentes compagnies de carrosse de la ville, avant de trouver celle qui a pris en charge Raldiniar. Le conducteur se
+souvient, moyennant quelques pièces - au minimum 5 PO, avoir pris le vieil homme chez lui, pour l’amener jusqu’à une taverne réputée de la ville,
+« les délices de la connaissance ». La course a été payée par un homme particulièrement charismatique et s’exprimant avec beaucoup d’élégance.\par
+Les \PJs ne trouveront pas de renseignements sur les hommes s’étant chargés des livres de Raldiniar, même s’ils y passent beaucoup de temps.
+
+\subsection{Les délices de la connaissance}
+La meilleure piste des \PJs mène donc à cette taverne. La clientèle y est particulièrement riche et bien habillée, et de nombreux magiciens en font
+partie.\par Alderic, le tenancier, est amical dès lors que l’on consomme à une table. Il se souvient effectivement de Raldiniar, qu’il connaît de
+réputation, et de l’homme de belle prestance qui l’attendait. Il s’en souvient très bien, car il a séjourné plusieurs jours dans une de ses meilleures
+chambres. Un homme très éloquent, s’appelant Gelandor. Il se souvient encore avoir vu les deux hommes sortir ensemble de l’établissement. Gelandor a
+quitté sa chambre voilà 2 jours.
+
+\subsection{L’enlèvement}
+Gelandor est le dirigeant de l’Ordre Nouveau, une organisation qu’il a créée pour réaliser ses desseins de domination. Il a eu vent de l’existence de
+la carte possedée par Aurore et de sa copie envoyée à Raldiniar. Il a essayé de convaincre ce dernier de travailler pour lui, sans succès. Cela s’est
+passé à la taverne. Alors, il a décidé de l’obliger à travailler pour lui. Il l’a enlevé, pour le garder prisonnier dans une maison qui lui sert de
+cachette. Pour l’obliger à travailler pour lui, il a utilisé un sort de Mission. Du fait de la grande volonté de Raldiniar, il lui a fallu quatre
+jours avant qu’un de ses sorts ne fasse effet. Il a fini par y arriver, et a laissé le vieil homme à la garde de Weskyl, son lieutenant, et d’hommes
+de main.
+
+\section{La recherche de Raldiniar}
+Après avoir parlé à Alderic, les \PJs vont se rendre compte que Gelandor est responsable de la disparition de Raldiniar. Mais les pistes s’arrêtent
+là.\par Laissons les \PJs chercher quelque temps. Ils pourront s’assurer auprès des gardes aux portes de la ville que Raldiniar ne l’a pas quitté. Par
+contre, ils pourront apprendre que Gelandor a effectivement quitté la ville deux jours avant, à condition de réussir un test de Charisme (DD 15).\par
+Il ne leur reste plus qu’à chercher des renseignements dans les différentes tavernes de la ville. Elles sont nombreuses, et il faut compter une
+demi-journée par quartier, et il y a 5 quartiers à explorer. \par Si les \PJs cherchent activement Raldiniar dans toute la ville, l’information se
+répand dès le lendemain, et arrive aux oreilles d’Edemont, l’homme à la balafre, qui en informe Weskyl.\par Cette dernière échafaude un plan pour se
+débarrasser à la fois des \PJs et d’un groupe d’anciens alliés devenus gênants, des brigands se cachant dans une forêt non loin de la ville. Elle se
+présente donc le lendemain soir aux \PJs dans une taverne, déguisée en Rôdeuse :
+\begin{paperbox}{ }
+	Bonjour messieurs, je m'appelle Tanara, et j'ai peut-être des informations pour vous !\par
+	J'étais dans la forêt proche pour affaires, il y a quelques jours, lorsque j'ai pu observer un groupe d'individus louches escortant un vieil homme,
+	qui ressemble fort à la description de votre ami. Si vous vous montrez généreux, je dois pouvoir retrouver l'endroit ou je les ai aperçus\ldots
+\end{paperbox}
+\section{Les brigands}
+\subsection{Une piste}
+Tanara (Weskyl) indique aux \PJs que les  que les brigands doivent être une demi-douzaine, cachés dans la forêt à une demi-journée de marche de
+la ville. \par Elle explique que ces brigands ont coutume d’enlever des hommes de lettres, et qu’ils demandent ensuite une rançon en général au bout
+de plusieurs jours. Elle conseille tout de même aux \PJs d’aller sur place et d’essayer de retrouver discrètement Raldiniar en évitant l’affrontement
+direct.\par Ce qu’elle ne dit pas, c’est que ce ne sont pas les brigands qui retiennent prisonnier Raldiniar. En fait, ces hors-la-loi ont déjà
+travaillé pour l’Ordre Nouveau, c’est pourquoi elle connaît leur cachette.\par Si un \PJ a des doutes sur ce que raconte Tanara, il a droit à un jet
+caché de Sagesse (Perspicacité) en opposition à un jet de Charisme (Tromperie) de Weskyl. S’il réussit, il a des doutes sur le personnage.
+\subsection{La forêt}
+Les brigands ont monté un petit campement dans la forêt, qui est éloignée des routes fréquentées, ce qui en fait une bonne cachette. Le campement a
+été établi dans une clairière, et ils y ont construit plusieurs petites cabanes en bois. Le camp n’est pas vraiment gardé, et les brigands ne
+s’attendent pas à une attaque, d’autant plus qu’ils n’ont enlevé personne.\par Six hommes d’armes font office de garde, et deux d’entre eux sont de
+faction pendant que les autres se reposent. Les autres brigands qui composent la bande sont : Keret, le chef de la bande, Daron, un magicien, et deux
+frères rôdeurs qui chassent dans la forêt. \par Le camp est composé de quatre baraques en bois.
+\subsubsection{La cabane des gardes} 
+La première cabane sert de logement aux hommes d’armes. Elle est meublée de six paillasses et de six coffres , une petite table et deux chaises. Il y
+a de 2 à 4 gardes, en fonction du moments. Les gardes y sont soit en train de se reposer, soit en train de jouer aux dés. Dans chaque coffre, il y a
+les différentes possessions sans valeur des gardes comme leurs vêtements. En cas de fouille, sur un jet d'Intelligence (Investigation) réussi, les
+\PJs peuvent trouver \dice{5d10} PO et \dice{10d10} PA.
+\subsubsection{La cantine} 
+La
+troisième sert de logement pour les rôdeurs, le cuisinier et l’artisan, on peut y trouver.
+La quatrième sert de logement pour le chef et le magicien.
+En journée, les rôdeurs quittent le campement pour aller chasser. Ils rentrent tard le soir. Il y a peu d’activités dans le camp, si ce n’est les séances d’entraînement des hommes d’armes par leur chef. Le cuisinier passe en général la journée dans la cuisine, avec l’artisan qui fabrique des flèches pour les rôdeurs. Le magicien reste dans sa cabane à étudier des livres. Les hommes se retrouvent tous le midi pour le repas.
+De nuit, les hommes commencent par le souper, tous ensembles, et ils restent ensuite à veiller deux heures et à jouer. Le reste de la nuit, seuls les gardes en faction sont réveillés.
+Attaque du camp (ND 9)
+En cas d’alerte, les hommes commencent par mettre leurs armures. Les premiers sortis sont les rôdeurs, le cuisinier et l’artisan (au bout d’une minute), puis le chef et le magicien (2 minutes) et enfin les 4 soldats (4 minutes).
+Si le chef et le magicien sont tués ou mis hors de combat, les autres fuient dans la forêt.
+Le chef des brigands se bat jusqu’à la mort, mais le magicien sera prêt à négocier si le combat tourne à l’avantage des PJ et que le chef est hors de combat.
+Evidemment, Raldiniar n’est pas dans le camp. Les PJ s’apercevront que leur guide les a laissés sans explication. Si le guide est surveillé, il utilise son parchemin de Porte dimensionnelle pour s’enfuir plus vite.
+
+\end{multicols}
+
+
+% End document
+\end{document}
